@@ -1,0 +1,7 @@
+{
+  "name": "TechTraining",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
