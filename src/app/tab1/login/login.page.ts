@@ -44,5 +44,7 @@ export class LoginPage implements OnInit {
       return;
     }
        this.loginService.login(this.user);
+       this.user.Email="";
+        this.user.Password="";
   }
 }

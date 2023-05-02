@@ -31,16 +31,23 @@ ngOnInit() {
 user:userEmailRegister ={
   Email:'',
   Password:'',
-  Username:''
+  ConfirmedPassword:''
 }
   
 
 register(){
-   if(this.user.Username=="" || this.user.Email=="" || this.user.Password=="") {
+   if(this.user.ConfirmedPassword=="" || this.user.Email=="" || this.user.Password=="") {
       console.log("Empty");
       return;
+    }else if(this.user.ConfirmedPassword!=this.user.Password){
+      console.log("the password and the confirmed password are not the same !!");
+      return;
+    }else{
+        this.RegisterService.register(this.user);
+        this.user.Email="";
+        this.user.Password="";
+        this.user.ConfirmedPassword="";
     }
-  this.RegisterService.register(this.user);
 }
 
 }

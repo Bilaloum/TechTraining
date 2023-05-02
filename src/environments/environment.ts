@@ -5,12 +5,13 @@
 export const environment = {
   production: false,
  firebase: {
-   apiKey: "AIzaSyD1N19Tme3CdchLlqLsp8ZflXRGabCnKEI",
-  authDomain: "techtraining-3a7c8.firebaseapp.com",
-  projectId: "techtraining-3a7c8",
-  storageBucket: "techtraining-3a7c8.appspot.com",
-  messagingSenderId: "269912823714",
-  appId: "1:269912823714:web:5fd39f741db844e716c4fb"
+  apiKey: "AIzaSyAYko1ww9lhrwRdJpsSbw0dLfKaYsSfGhw",
+  authDomain: "techtriningapp.firebaseapp.com",
+  projectId: "techtriningapp",
+  storageBucket: "techtriningapp.appspot.com",
+  messagingSenderId: "1060860514370",
+  appId: "1:1060860514370:web:502d18433b301368fe5ddb",
+  measurementId: "G-RKMX0FP4TE"
   }
 
 };

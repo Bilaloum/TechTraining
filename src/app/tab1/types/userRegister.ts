@@ -1,5 +1,5 @@
 export default interface userEmailRegister{
-Username:string;
+ConfirmedPassword:string;
 Email:string;
 Password:string;
 }
