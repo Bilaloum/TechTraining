@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+
 import { style, transition, trigger ,animate} from '@angular/animations';
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
-   animations: [
+    animations: [
     trigger('wrapperAnimation', [
       transition(':enter', [
         style({ transform: 'translateY(100%)' }),
