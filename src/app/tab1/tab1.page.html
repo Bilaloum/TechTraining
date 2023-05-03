@@ -1,0 +1,39 @@
+<ion-content>
+  <div id="header" [@headerAnimation]>
+    <div id="app-bar">
+      <!--<ion-icon name="arrow-back" routerLink=""></ion-icon>-->
+      <div id="logo">
+        <img src="../../assets/icon/R.jpg" />
+      </div>
+    </div>
+    <h1>Welcome</h1>
+    <p>Discover amazing thing around you</p>
+  </div>
+
+  <div class="wrapper" [@wrapperAnimation]>
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <ion-button class="sign-in" expand="block" routerLink="./login">Sign in</ion-button>
+        <ion-button class="sign-up" expand="block" routerLink="./register">Sign up</ion-button>
+        <div class="line-text">
+          <span class="lines"></span>
+          <span class="text">Or connect using</span>
+        </div>
+        <div class="socials">
+          <ion-button class="btn-fb">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-gb">
+            <ion-icon name="logo-github"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-go">
+            <ion-icon name="logo-google"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-ph">
+            <ion-icon name="call-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
