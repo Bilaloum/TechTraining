@@ -10,8 +10,8 @@ export const environment = {
   projectId: "techtriningapp",
   storageBucket: "techtriningapp.appspot.com",
   messagingSenderId: "1060860514370",
-  appId: "1:1060860514370:web:502d18433b301368fe5ddb",
-  measurementId: "G-RKMX0FP4TE"
+  appId: "1:1060860514370:web:014d9bf9cdb41e2ffe5ddb",
+  measurementId: "G-5JXL9PZN26"
   }
 
 };
