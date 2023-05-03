@@ -1,0 +1,1187 @@
+{
+    "count": 10000,
+    "next": "https://www.udemy.com/api-2.0/courses/?page=2&page_size=12",
+    "previous": null,
+    "results": [
+        {
+            "_class": "course",
+            "id": 473160,
+            "title": "Web Design for Web Developers: Build Beautiful Websites!",
+            "url": "/course/web-design-secrets/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "YixKjIYPQ9C9q9Y9JeUKHQ",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "Jonas Schmedtmann",
+                    "name": "Jonas",
+                    "display_name": "Jonas Schmedtmann",
+                    "job_title": "Web Developer, Designer, and Teacher",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/7799204_2091_5.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/7799204_2091_5.jpg",
+                    "initials": "JS",
+                    "url": "/user/jonasschmedtmann/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/473160_d929_3.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/473160_d929_3.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/473160_d929_3.jpg",
+            "published_title": "web-design-secrets",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_US",
+                "title": "English (US)",
+                "english_title": "English (US)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "Learn web design in 1 hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included!",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 433798,
+            "title": "Introduction To Python Programming",
+            "url": "/course/pythonforbeginnersintro/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "fK9gA7mCSyKXeHiLs_abgQ",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "Avinash Jain",
+                    "name": "Avinash",
+                    "display_name": "Avinash Jain",
+                    "job_title": "CEO of TheCodex.me - Teaching 500,000+ Students how to code",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/10260436_946b_6.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/10260436_946b_6.jpg",
+                    "initials": "AJ",
+                    "url": "/user/avinashjain5/"
+                },
+                {
+                    "_class": "user",
+                    "title": "The Codex",
+                    "name": "The",
+                    "display_name": "The Codex",
+                    "job_title": "Teaching Python through Projects",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/52310762_220a.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/52310762_220a.jpg",
+                    "initials": "TC",
+                    "url": "/user/thecodex/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/433798_1de9_4.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/433798_1de9_4.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/433798_1de9_4.jpg",
+            "published_title": "pythonforbeginnersintro",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_US",
+                "title": "English (US)",
+                "english_title": "English (US)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "A Quick and Easy Intro into Python Programming",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 1331946,
+            "title": "Amazon Web Services (AWS) - Zero to Hero",
+            "url": "/course/amazon-web-services-aws-v/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "yf9FSRQpSeqTFW7XIDZybg",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "BackSpace Academy",
+                    "name": "BackSpace",
+                    "display_name": "BackSpace Academy",
+                    "job_title": "The fastest route to cloud certification.",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/27829848_1d83.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/27829848_1d83.jpg",
+                    "initials": "BA",
+                    "url": "/user/backspace-academy/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/1331946_ed41_4.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/1331946_ed41_4.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/1331946_ed41_4.jpg",
+            "published_title": "amazon-web-services-aws-v",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_US",
+                "title": "English (US)",
+                "english_title": "English (US)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "Beginners, Zero to Hero. AWS EC2 web server, NodeJS Server, AWS RDS database server, S3, SES & CloudWatch. FREE",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 4290300,
+            "title": "Energy Protection & Boundaries Practitioner| ACCREDITED",
+            "url": "/course/lessons-for-light-workers-healers-counselors-therapists/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "AMHkd_bITbWjlv-sbBKbdw",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "Sufani Garza, Place of Bliss Academy",
+                    "name": "Sufani Garza,",
+                    "display_name": "Sufani Garza, Place of Bliss Academy",
+                    "job_title": "Place of Bliss Academy & Sanctuary| Founder & Director",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/127795328_5cc8_3.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/127795328_5cc8_3.jpg",
+                    "initials": "SP",
+                    "url": "/user/sufani-garza/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/4290300_c0a4_6.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/4290300_c0a4_6.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/4290300_c0a4_6.jpg",
+            "published_title": "lessons-for-light-workers-healers-counselors-therapists",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_US",
+                "title": "English (US)",
+                "english_title": "English (US)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "Learn to set boundaries, protect yourself from energy drains, grounding, engage self-care, balance and energy work Q&A",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 24823,
+            "title": "Java Tutorial for Complete Beginners",
+            "url": "/course/java-tutorial/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "BKTRKBCbREGebFlbKaJNEg",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "John Purcell",
+                    "name": "John",
+                    "display_name": "John Purcell",
+                    "job_title": "Software Development Trainer",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/219513_a344_6.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/219513_a344_6.jpg",
+                    "initials": "JP",
+                    "url": "/user/johnpurcell/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/24823_963e_14.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/24823_963e_14.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/24823_963e_14.jpg",
+            "published_title": "java-tutorial",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_GB",
+                "title": "English (UK)",
+                "english_title": "English (UK)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "Learn to program using the Java programming language",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 53600,
+            "title": "Useful Excel for Beginners",
+            "url": "/course/useful-excel-for-beginners/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "3N4rTUG6QO6hEfCpXEQm6A",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "Dinesh Natarajan Mohan",
+                    "name": "Dinesh",
+                    "display_name": "Dinesh Natarajan Mohan",
+                    "job_title": "Sharing simple but effective solutions",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/766769_faf7_6.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/766769_faf7_6.jpg",
+                    "initials": "DN",
+                    "url": "/user/indzara/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/53600_553c_4.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/53600_553c_4.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/53600_553c_4.jpg",
+            "published_title": "useful-excel-for-beginners",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_IN",
+                "title": "English (India)",
+                "english_title": "English (India)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "Learn the basics of Microsoft Excel and become an effective user",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 3633804,
+            "title": "How to Learn: Effective Approaches for Self-Guided Learning",
+            "url": "/course/how-to-learn-effective-approaches-for-self-guided-learning/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "mMW5uxtyRbGTm6Qdjalsyw",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "Padraig Nash",
+                    "name": "Padraig",
+                    "display_name": "Padraig Nash",
+                    "job_title": "Director of Learning Science and Instructional Design",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/111614824_961e.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/111614824_961e.jpg",
+                    "initials": "PN",
+                    "url": "/user/padraig-nash/"
+                },
+                {
+                    "_class": "user",
+                    "title": "Udemy Learning Team",
+                    "name": "Udemy Learning",
+                    "display_name": "Udemy Learning Team",
+                    "job_title": "Udemy Learning Team",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/124095718_f0cc_9.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/124095718_f0cc_9.jpg",
+                    "initials": "UT",
+                    "url": "/user/svc-ld-team/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/3633804_2d54_2.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/3633804_2d54_2.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/3633804_2d54_2.jpg",
+            "published_title": "how-to-learn-effective-approaches-for-self-guided-learning",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_US",
+                "title": "English (US)",
+                "english_title": "English (US)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "Discover learning best practices, including setting goals, practicing & applying, reflecting, and learning with others.",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 780078,
+            "title": "How to speak to anyone & be fearless - in less than 55 min",
+            "url": "/course/fearless-public-speaker-bootcamp-by-ricky-mendoza/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "X_T1eTU2RpmbgTtaDNaUUQ",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "Ricardo Mendoza",
+                    "name": "Ricardo",
+                    "display_name": "Ricardo Mendoza",
+                    "job_title": "Founder of Digital Work Studios and Interpretap",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/8678100_c955_2.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/8678100_c955_2.jpg",
+                    "initials": "RM",
+                    "url": "/user/ricardomendoza9/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/780078_e409_2.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/780078_e409_2.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/780078_e409_2.jpg",
+            "published_title": "fearless-public-speaker-bootcamp-by-ricky-mendoza",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_US",
+                "title": "English (US)",
+                "english_title": "English (US)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "Learn to quickly connect with crowds of strangers, be better on dates or ace that job interview.",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 1898178,
+            "title": "Git: Become an Expert in Git & GitHub in 4 Hours",
+            "url": "/course/git-expert-4-hours/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "NGimfhaOTKu1J0Y7SGICUA",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "VideoLab by Jad Khalili",
+                    "name": "VideoLab",
+                    "display_name": "VideoLab by Jad Khalili",
+                    "job_title": "Instructor - 100K+ Students Worldwide",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/16117512_51ea_3.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/16117512_51ea_3.jpg",
+                    "initials": "VB",
+                    "url": "/user/jad-khalili/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/1898178_f734.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/1898178_f734.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/1898178_f734.jpg",
+            "published_title": "git-expert-4-hours",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_US",
+                "title": "English (US)",
+                "english_title": "English (US)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "Become an Expert in Git & GitHub by writing commands, learning theory, and taking quizzes. Learn Git today in 4 hours!",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 797156,
+            "title": "A Mini Course on Time Management",
+            "url": "/course/manageyourtime/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "6pcgKA6PSNiO8Z-DTz8NOQ",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "Brandon Hakim",
+                    "name": "Brandon",
+                    "display_name": "Brandon Hakim",
+                    "job_title": "Founder of InsiderSchool",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/9304596_0ac3_7.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/9304596_0ac3_7.jpg",
+                    "initials": "BH",
+                    "url": "/user/brandonhakim/"
+                },
+                {
+                    "_class": "user",
+                    "title": "Insider School",
+                    "name": "Insider",
+                    "display_name": "Insider School",
+                    "job_title": "Change Your Life In 5 Minutes A Day",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/129334448_b32a_3.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/129334448_b32a_3.jpg",
+                    "initials": "IS",
+                    "url": "/user/insider-school/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/797156_d7dd_5.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/797156_d7dd_5.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/797156_d7dd_5.jpg",
+            "published_title": "manageyourtime",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_US",
+                "title": "English (US)",
+                "english_title": "English (US)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "7 steps you can use immediately to become more productive and master time management",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 3060786,
+            "title": "Deep Learning Prerequisites: The Numpy Stack in Python V2",
+            "url": "/course/numpy-python/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "0aOuRU8jTo69A00ADYWDqQ",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "Lazy Programmer Team",
+                    "name": "Lazy Programmer",
+                    "display_name": "Lazy Programmer Team",
+                    "job_title": "Artificial Intelligence and Machine Learning Engineer",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/75391750_5441.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/75391750_5441.jpg",
+                    "initials": "LT",
+                    "url": "/user/lazy-programmer-team/"
+                },
+                {
+                    "_class": "user",
+                    "title": "Lazy Programmer Inc.",
+                    "name": "Lazy Programmer",
+                    "display_name": "Lazy Programmer Inc.",
+                    "job_title": "Artificial intelligence and machine learning engineer",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/14266988_a969_10.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/14266988_a969_10.jpg",
+                    "initials": "LI",
+                    "url": "/user/lazy-programmer/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/3060786_438f_2.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/3060786_438f_2.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/3060786_438f_2.jpg",
+            "published_title": "numpy-python",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_US",
+                "title": "English (US)",
+                "english_title": "English (US)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "Numpy, Scipy, Pandas, and Matplotlib: prep for deep learning, machine learning, and artificial intelligence",
+            "instructor_name": null
+        },
+        {
+            "_class": "course",
+            "id": 3212317,
+            "title": "Statistics and data literacy for non-statisticians",
+            "url": "/course/statistics-literacy-for-non-statisticians/",
+            "is_paid": false,
+            "price": "Free",
+            "price_detail": null,
+            "price_serve_tracking_id": "D_6XFVA8SwWYMw7gRb1sPw",
+            "visible_instructors": [
+                {
+                    "_class": "user",
+                    "title": "Mike X Cohen",
+                    "name": "Mike X",
+                    "display_name": "Mike X Cohen",
+                    "job_title": "Educator and writer",
+                    "image_50x50": "https://img-c.udemycdn.com/user/50x50/37969484_bca7_9.jpg",
+                    "image_100x100": "https://img-c.udemycdn.com/user/100x100/37969484_bca7_9.jpg",
+                    "initials": "MC",
+                    "url": "/user/mike-x-cohen/"
+                }
+            ],
+            "image_125_H": "https://img-c.udemycdn.com/course/125_H/3212317_d119_3.jpg",
+            "image_240x135": "https://img-c.udemycdn.com/course/240x135/3212317_d119_3.jpg",
+            "is_practice_test_course": false,
+            "image_480x270": "https://img-c.udemycdn.com/course/480x270/3212317_d119_3.jpg",
+            "published_title": "statistics-literacy-for-non-statisticians",
+            "tracking_id": "",
+            "locale": {
+                "_class": "locale",
+                "locale": "en_US",
+                "title": "English (US)",
+                "english_title": "English (US)",
+                "simple_english_title": "English"
+            },
+            "predictive_score": null,
+            "relevancy_score": null,
+            "input_features": null,
+            "lecture_search_result": null,
+            "curriculum_lectures": [],
+            "order_in_results": null,
+            "curriculum_items": [],
+            "headline": "Learn the key terms and analysis methods in statistics",
+            "instructor_name": null
+        }
+    ],
+    "aggregations": [
+        {
+            "id": "price",
+            "title": "Price",
+            "options": [
+                {
+                    "key": "price",
+                    "title": "Paid",
+                    "count": 10000,
+                    "value": "price-paid"
+                },
+                {
+                    "key": "price",
+                    "title": "Free",
+                    "count": 10000,
+                    "value": "price-free"
+                }
+            ]
+        },
+        {
+            "id": "instructional_level",
+            "title": "Level",
+            "options": [
+                {
+                    "key": "instructional_level",
+                    "title": "All Levels",
+                    "count": 10000,
+                    "value": "all"
+                },
+                {
+                    "key": "instructional_level",
+                    "title": "Beginner",
+                    "count": 10000,
+                    "value": "beginner"
+                },
+                {
+                    "key": "instructional_level",
+                    "title": "Intermediate",
+                    "count": 10000,
+                    "value": "intermediate"
+                },
+                {
+                    "key": "instructional_level",
+                    "title": "Expert",
+                    "count": 4644,
+                    "value": "expert"
+                }
+            ]
+        },
+        {
+            "id": "features",
+            "title": "Features",
+            "options": [
+                {
+                    "key": "has_closed_caption",
+                    "title": "Captions",
+                    "count": 10000,
+                    "value": "true"
+                },
+                {
+                    "key": "has_simple_quiz",
+                    "title": "Quizzes",
+                    "count": 10000,
+                    "value": "true"
+                },
+                {
+                    "key": "has_coding_exercises",
+                    "title": "Coding Exercises",
+                    "count": 1022,
+                    "value": "true"
+                },
+                {
+                    "key": "has_practice_test",
+                    "title": "Practice Tests",
+                    "count": 10000,
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "id": "language",
+            "title": "Language",
+            "options": [
+                {
+                    "key": "language",
+                    "title": "English",
+                    "count": 10000,
+                    "value": "en"
+                },
+                {
+                    "key": "language",
+                    "title": "Português",
+                    "count": 10000,
+                    "value": "pt"
+                },
+                {
+                    "key": "language",
+                    "title": "Español",
+                    "count": 10000,
+                    "value": "es"
+                },
+                {
+                    "key": "language",
+                    "title": "Türkçe",
+                    "count": 8785,
+                    "value": "tr"
+                },
+                {
+                    "key": "language",
+                    "title": "日本語",
+                    "count": 7599,
+                    "value": "ja"
+                },
+                {
+                    "key": "language",
+                    "title": "Deutsch",
+                    "count": 6375,
+                    "value": "de"
+                },
+                {
+                    "key": "language",
+                    "title": "Français",
+                    "count": 5920,
+                    "value": "fr"
+                },
+                {
+                    "key": "language",
+                    "title": "العربية",
+                    "count": 5343,
+                    "value": "ar"
+                },
+                {
+                    "key": "language",
+                    "title": "Italiano",
+                    "count": 3846,
+                    "value": "it"
+                },
+                {
+                    "key": "language",
+                    "title": "中文",
+                    "count": 2840,
+                    "value": "zh"
+                },
+                {
+                    "key": "language",
+                    "title": "Русский",
+                    "count": 2455,
+                    "value": "ru"
+                },
+                {
+                    "key": "language",
+                    "title": "한국어",
+                    "count": 2284,
+                    "value": "ko"
+                },
+                {
+                    "key": "language",
+                    "title": "हिन्दी",
+                    "count": 1802,
+                    "value": "hi"
+                },
+                {
+                    "key": "language",
+                    "title": "Bahasa Indonesia",
+                    "count": 1678,
+                    "value": "id"
+                },
+                {
+                    "key": "language",
+                    "title": "Polski",
+                    "count": 1584,
+                    "value": "pl"
+                },
+                {
+                    "key": "language",
+                    "title": "اردو",
+                    "count": 452,
+                    "value": "ur"
+                },
+                {
+                    "key": "language",
+                    "title": "ภาษาไทย",
+                    "count": 350,
+                    "value": "th"
+                },
+                {
+                    "key": "language",
+                    "title": "Română",
+                    "count": 304,
+                    "value": "ro"
+                },
+                {
+                    "key": "language",
+                    "title": "தமிழ்",
+                    "count": 245,
+                    "value": "ta"
+                },
+                {
+                    "key": "language",
+                    "title": "Tiếng Việt",
+                    "count": 219,
+                    "value": "vi"
+                },
+                {
+                    "key": "language",
+                    "title": "Nederlands",
+                    "count": 209,
+                    "value": "nl"
+                },
+                {
+                    "key": "language",
+                    "title": "‏עברית‏",
+                    "count": 138,
+                    "value": "he"
+                },
+                {
+                    "key": "language",
+                    "title": "Bangla",
+                    "count": 87,
+                    "value": "bn"
+                },
+                {
+                    "key": "language",
+                    "title": "Ελληνικά",
+                    "count": 84,
+                    "value": "el"
+                },
+                {
+                    "key": "language",
+                    "title": "Azərbaycan dili",
+                    "count": 78,
+                    "value": "az"
+                },
+                {
+                    "key": "language",
+                    "title": "Magyar",
+                    "count": 76,
+                    "value": "hu"
+                },
+                {
+                    "key": "language",
+                    "title": "Telugu",
+                    "count": 61,
+                    "value": "te"
+                },
+                {
+                    "key": "language",
+                    "title": "Українська",
+                    "count": 61,
+                    "value": "uk"
+                },
+                {
+                    "key": "language",
+                    "title": "मराठी",
+                    "count": 58,
+                    "value": "mr"
+                },
+                {
+                    "key": "language",
+                    "title": "Malayāḷam",
+                    "count": 49,
+                    "value": "ml"
+                },
+                {
+                    "key": "language",
+                    "title": "فارسی",
+                    "count": 32,
+                    "value": "fa"
+                },
+                {
+                    "key": "language",
+                    "title": "Hrvatski",
+                    "count": 31,
+                    "value": "hr"
+                },
+                {
+                    "key": "language",
+                    "title": "Afrikaans",
+                    "count": 24,
+                    "value": "af"
+                },
+                {
+                    "key": "language",
+                    "title": "မြန်မာဘာသာ",
+                    "count": 24,
+                    "value": "my"
+                },
+                {
+                    "key": "language",
+                    "title": "Български",
+                    "count": 21,
+                    "value": "bg"
+                },
+                {
+                    "key": "language",
+                    "title": "Čeština",
+                    "count": 19,
+                    "value": "cs"
+                },
+                {
+                    "key": "language",
+                    "title": "ગુજરાતી",
+                    "count": 17,
+                    "value": "gu"
+                },
+                {
+                    "key": "language",
+                    "title": "Filipino",
+                    "count": 17,
+                    "value": "tl"
+                },
+                {
+                    "key": "language",
+                    "title": "Norsk",
+                    "count": 16,
+                    "value": "nb"
+                },
+                {
+                    "key": "language",
+                    "title": "Svenska",
+                    "count": 16,
+                    "value": "sv"
+                },
+                {
+                    "key": "language",
+                    "title": "Bahasa Melayu",
+                    "count": 15,
+                    "value": "ms"
+                },
+                {
+                    "key": "language",
+                    "title": "Suomi",
+                    "count": 12,
+                    "value": "fi"
+                },
+                {
+                    "key": "language",
+                    "title": "ქართული",
+                    "count": 12,
+                    "value": "ka"
+                },
+                {
+                    "key": "language",
+                    "title": "Soomaaliga",
+                    "count": 12,
+                    "value": "so"
+                },
+                {
+                    "key": "language",
+                    "title": "Српски",
+                    "count": 12,
+                    "value": "sr"
+                },
+                {
+                    "key": "language",
+                    "title": "Kannaḍa",
+                    "count": 11,
+                    "value": "kn"
+                },
+                {
+                    "key": "language",
+                    "title": "Shqip",
+                    "count": 11,
+                    "value": "sq"
+                },
+                {
+                    "key": "language",
+                    "title": "Eesti",
+                    "count": 9,
+                    "value": "et"
+                },
+                {
+                    "key": "language",
+                    "title": "नेपाली",
+                    "count": 9,
+                    "value": "ne"
+                },
+                {
+                    "key": "language",
+                    "title": "Dansk",
+                    "count": 8,
+                    "value": "da"
+                },
+                {
+                    "key": "language",
+                    "title": "Latviešu",
+                    "count": 8,
+                    "value": "lv"
+                },
+                {
+                    "key": "language",
+                    "title": "Қазақша",
+                    "count": 7,
+                    "value": "kk"
+                },
+                {
+                    "key": "language",
+                    "title": "Lietuvių",
+                    "count": 7,
+                    "value": "lt"
+                },
+                {
+                    "key": "language",
+                    "title": "ਪੰਜਾਬੀ",
+                    "count": 7,
+                    "value": "pa"
+                },
+                {
+                    "key": "language",
+                    "title": "پښتو",
+                    "count": 7,
+                    "value": "ps"
+                },
+                {
+                    "key": "language",
+                    "title": "Gaeilge",
+                    "count": 6,
+                    "value": "ga"
+                },
+                {
+                    "key": "language",
+                    "title": "Slovenčina",
+                    "count": 6,
+                    "value": "sk"
+                },
+                {
+                    "key": "language",
+                    "title": "Kiswahili",
+                    "count": 6,
+                    "value": "sw"
+                },
+                {
+                    "key": "language",
+                    "title": "O'zbek",
+                    "count": 6,
+                    "value": "uz"
+                },
+                {
+                    "key": "language",
+                    "title": "Kurdî",
+                    "count": 5,
+                    "value": "ku"
+                },
+                {
+                    "key": "language",
+                    "title": "Català",
+                    "count": 4,
+                    "value": "ca"
+                },
+                {
+                    "key": "language",
+                    "title": "Khmer",
+                    "count": 4,
+                    "value": "km"
+                },
+                {
+                    "key": "language",
+                    "title": "Монгол",
+                    "count": 4,
+                    "value": "mn"
+                },
+                {
+                    "key": "language",
+                    "title": "Slovenščina",
+                    "count": 4,
+                    "value": "sl"
+                },
+                {
+                    "key": "language",
+                    "title": "Ayisyen",
+                    "count": 3,
+                    "value": "ht"
+                },
+                {
+                    "key": "language",
+                    "title": "Avañe'ẽ",
+                    "count": 2,
+                    "value": "gn"
+                },
+                {
+                    "key": "language",
+                    "title": "Qhichwa",
+                    "count": 2,
+                    "value": "qu"
+                },
+                {
+                    "key": "language",
+                    "title": "Aymar aru",
+                    "count": 1,
+                    "value": "ay"
+                },
+                {
+                    "key": "language",
+                    "title": "Føroyskt",
+                    "count": 1,
+                    "value": "fo"
+                },
+                {
+                    "key": "language",
+                    "title": "Frysk",
+                    "count": 1,
+                    "value": "fy"
+                },
+                {
+                    "key": "language",
+                    "title": "Հայերեն",
+                    "count": 1,
+                    "value": "hy"
+                },
+                {
+                    "key": "language",
+                    "title": "Македонски",
+                    "count": 1,
+                    "value": "mk"
+                },
+                {
+                    "key": "language",
+                    "title": "тоҷикӣ, تاجیکی‎, tojikī",
+                    "count": 1,
+                    "value": "tg"
+                },
+                {
+                    "key": "language",
+                    "title": "isiXhosa",
+                    "count": 1,
+                    "value": "xh"
+                }
+            ]
+        },
+        {
+            "id": "ratings",
+            "title": "Ratings",
+            "options": [
+                {
+                    "key": "ratings",
+                    "title": "4.5 & up",
+                    "count": 10000,
+                    "value": "4.5"
+                },
+                {
+                    "key": "ratings",
+                    "title": "4.0 & up",
+                    "count": 10000,
+                    "value": "4.0"
+                },
+                {
+                    "key": "ratings",
+                    "title": "3.5 & up",
+                    "count": 10000,
+                    "value": "3.5"
+                },
+                {
+                    "key": "ratings",
+                    "title": "3.0 & up",
+                    "count": 10000,
+                    "value": "3.0"
+                }
+            ]
+        },
+        {
+            "id": "duration",
+            "title": "Duration",
+            "options": [
+                {
+                    "key": "duration",
+                    "title": "0-1 Hour",
+                    "count": 10000,
+                    "value": "extraShort"
+                },
+                {
+                    "key": "duration",
+                    "title": "1-3 Hours",
+                    "count": 10000,
+                    "value": "short"
+                },
+                {
+                    "key": "duration",
+                    "title": "3-6 Hours",
+                    "count": 10000,
+                    "value": "medium"
+                },
+                {
+                    "key": "duration",
+                    "title": "6-17 Hours",
+                    "count": 10000,
+                    "value": "long"
+                },
+                {
+                    "key": "duration",
+                    "title": "17+ Hours",
+                    "count": 9993,
+                    "value": "extraLong"
+                }
+            ]
+        }
+    ]
+}
