@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary-color">
+  <ion-toolbar color="primary">
     <ion-item>
       <ion-avatar slot="start">
         <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
@@ -89,7 +89,7 @@
   <ion-row class="recommandeds-row">
     <swiper [config]="bannerConfig" class="recommanded-courses">
       <ng-template swiperSlide *ngFor="let course of courses">
-        <ion-card class="card">
+        <ion-card class="card" [routerLink]="[course.id]">
           <img [src]="course.image_480x270" alt="course image" />
           <ion-card-content>
             <ion-card-subtitle class="ion-text-wrap" color="dark">{{course.title}}</ion-card-subtitle>
