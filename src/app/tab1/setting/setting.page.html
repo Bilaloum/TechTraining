@@ -1,7 +1,7 @@
 <ion-content>
   <div id="header" [@headerAnimation]>
     <div id="app-bar">
-      <ion-icon name="arrow-back" routerLink="../"></ion-icon>
+      <ion-icon name="arrow-back" (click)="checkBeforeNavigate()"></ion-icon>
       <div id="logo">
         <img src="../../../assets/icon/R.jpg" />
       </div>
@@ -15,9 +15,9 @@
       <ion-card-content>
         <ion-item>
           <ion-icon name="mail"></ion-icon>
-          <ion-input type="text" placeholder="Email"></ion-input>
+          <ion-input type="text" placeholder="Email"  [(ngModel)]="curentEmail"></ion-input>
         </ion-item>
-        <ion-button class="submit" expand="block">Resit</ion-button>
+        <ion-button class="submit" expand="block" (click)="ResetEmail()">Resit</ion-button>
       </ion-card-content>
     </ion-card>
   </div>
