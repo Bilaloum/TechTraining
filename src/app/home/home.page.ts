@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SwiperOptions } from "swiper";
 @Component({
     selector: 'app-home',
@@ -223,7 +224,9 @@ export class HomePage implements OnInit {
         centeredSlides:true,
         }
     }
-    constructor() { }
+    constructor(private router: Router) { }
 
-
+    navigateTodetails(course_id){
+        // this.router.navigateByUrl('/',{"id": course_id})
+    }
 }
