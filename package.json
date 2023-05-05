@@ -29,6 +29,7 @@
     "@codetrix-studio/capacitor-google-auth": "^3.2.2",
     "@ionic/angular": "^7.0.0",
     "firebase": "^9.21.0",
+    "firestore": "^1.1.6",
     "ionicons": "^7.0.0",
     "rxjs": "~7.5.0",
     "swiper": "^8.4.6",
