@@ -1,18 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div id="header" [@headerAnimation]>
+    <div id="app-bar">
+      <!--<ion-icon name="arrow-back" routerLink=""></ion-icon>-->
+      <div id="logo">
+        <img src="../../assets/icon/R.jpg" />
+      </div>
+    </div>
+    <h1>{{getUsername()}}</h1>
+    <p></p>
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div class="wrapper" [@wrapperAnimation]>
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <ion-button class="settings" expand="block" routerLink="/tabs/tab1/setting">Settings</ion-button>
+        <ion-button class="Loge-out" expand="block" (click)="LogOut()">Log Out</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
 </ion-content>

@@ -1,5 +1,7 @@
 import { style, transition, trigger,animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { AuthServiceService } from '../Services/auth-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-setting',
@@ -21,9 +23,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingPage implements OnInit {
 
-  constructor() { }
+  constructor(private loginService:AuthServiceService,private router:Router) { }
 
   ngOnInit() {
+  }
+   
+  curentEmail='';
+
+  checkBeforeNavigate(){
+    if(this.loginService.isAuthenticated==true){
+     this.router.navigate(['/tabs/tab2']);
+    }else{
+     this.router.navigate(['../']);
+    }
+  }
+
+  ResetEmail(){
+    this.loginService.sendResetEmail(this.curentEmail);
   }
 
 }
