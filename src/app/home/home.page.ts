@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SwiperOptions } from "swiper";
+import { CoursesService } from '../Services/courses.service';
 @Component({
     selector: 'app-home',
     templateUrl: './home.page.html',
@@ -12,6 +13,11 @@ export class HomePage implements OnInit {
     categoriesSwap: SwiperOptions; 
     categories: string[];
     courses;
+    constructor(private router: Router, private coursesService:CoursesService) { 
+        this.coursesService.getCourses().subscribe( res => {
+        console.log(res);
+        })
+    }
     ngOnInit(): void {
     this.courses = [
             {
@@ -207,6 +213,7 @@ export class HomePage implements OnInit {
             },
     ]
     this.categories = ['programming','Design','Science','photography']
+
     }
 
     ngAfterContentChecked(): void {
@@ -224,9 +231,6 @@ export class HomePage implements OnInit {
         centeredSlides:true,
         }
     }
-    constructor(private router: Router) { }
 
-    navigateTodetails(course_id){
-        // this.router.navigateByUrl('/',{"id": course_id})
-    }
+
 }
