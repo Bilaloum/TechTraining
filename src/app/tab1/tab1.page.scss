@@ -115,7 +115,9 @@ ion-content {
                
                      .socials {
                          display: flex;
-                         justify-content: center;
+                         flex-direction: column;
+                         justify-content: stretch;
+                         
                          padding: 5px;
         
                          ion-button {
@@ -138,6 +140,7 @@ ion-content {
         
                          .btn-go {
                              --background: #fd684f;
+
                          }
         
                          .btn-ph {

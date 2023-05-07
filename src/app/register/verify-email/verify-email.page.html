@@ -1,0 +1,25 @@
+<ion-content>
+  <div id="header" [@headerAnimation]>
+    <div id="app-bar">
+      <!--<ion-icon name="arrow-back" routerLink=""></ion-icon>-->
+      <div id="logo">
+        <img src="../../assets/icon/R.jpg" />
+      </div>
+    </div>
+    <h1>verify-email</h1>
+    <!--<p>Discover amazing thing around you</p>-->
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <h2>Ionic Firebase Verify Email</h2>
+      <p>
+        Please check your email and click on the link to verfiy your email address.
+      </p>
+      <ion-button type="submit" (click)="authService.SendVerificationMail()" expand="block">
+        Resend Verification Email
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
