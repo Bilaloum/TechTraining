@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { style, transition, trigger ,animate} from '@angular/animations';
+
+import { Route, Router } from '@angular/router';
+import { AuthServiceService } from '../Services/AuthServices/auth-service.service';
+import { error } from 'console';
 
 @Component({
   selector: 'app-tab1',
@@ -21,9 +25,17 @@ import { style, transition, trigger ,animate} from '@angular/animations';
   ]
  
 })
-export class Tab1Page {
+export class Tab1Page  {
 
-  constructor() {}
+  constructor(public authService:AuthServiceService,private router : Router) {}
 
-  
+
+   GoogleAuth(){
+      this.authService.GoogleAuth().then(()=>{
+        this.router.navigate(['tabs/home']);
+      }).catch((error)=>{
+           console.log(error);
+      });
+  }
+
 }

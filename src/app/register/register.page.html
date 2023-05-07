@@ -1,0 +1,57 @@
+<ion-content>
+  <div id="header" [@headerAnimation]>
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="../"></ion-icon>
+      <div id="logo">
+        <img src="../../../assets/icon/R.jpg" />
+      </div>
+    </div>
+    <h1>Sign Up</h1>
+    <p>Sign Up to discover amazing thing near<br />around</p>
+  </div>
+
+  <div class="wrapper" [@wrapperAnimation]>
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <ion-item>
+          <ion-icon name="mail"></ion-icon>
+          <ion-input type="Email" placeholder="Email" #email></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+          <ion-input type="password" placeholder="password" #password></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+          <ion-input type="password" placeholder="Confirmed password" #confirmedPassword></ion-input>
+        </ion-item>
+        <ion-button class="submit" expand="block" (click)="signUp(email,password,confirmedPassword)">Sign
+          up</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- <div class="line-text">
+      <span class="lines"></span>
+      <span class="text">Or connect using</span>
+    </div>
+
+     <ion-card class="social-wrapper">
+      <ion-card-content>
+        <div class="socials">
+          <ion-button class="btn-fb">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-gb">
+            <ion-icon name="logo-github"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-go"  (click)="authService.GoogleAuth()">
+            <ion-icon name="logo-google"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-ph">
+            <ion-icon name="call-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>-->
+  </div>
+</ion-content>

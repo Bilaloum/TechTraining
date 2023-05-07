@@ -12,6 +12,7 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { provideFirebaseApp,initializeApp } from "@angular/fire/app";
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { environment } from 'src/environments/environment';
     IonicModule.forRoot(), 
     AppRoutingModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore())
