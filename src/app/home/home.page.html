@@ -66,37 +66,30 @@
   <ion-row>
     <ion-row>
       <swiper [config]="categoriesSwap">
-        <ng-template swiperSlide>
-            <ion-button class="ion-text-capitalize">
-              <ion-icon name="code-slash" color="light" slot="start"></ion-icon>
-              programming
-            </ion-button>
-            <ion-button class="ion-text-capitalize">
-              <ion-icon name="desktop" color="light" slot="start"></ion-icon>
-              desgin
-            </ion-button>
-            <ion-button class="ion-text-capitalize">
-              <ion-icon name="bag" color="light" slot="start"></ion-icon>
-              Business
-            </ion-button>
-        </ng-template>
+        <ng-component swiperSlide>
+            <ion-button class="ion-text-capitalize" *ngFor="let category of categories">
+              <ion-icon [name]="category.icon_name" color="light" slot="start"></ion-icon>
+              {{category.name}}
+            </ion-button> 
+        </ng-component>
       </swiper>  
     </ion-row>
   </ion-row>
   <div class="section-text ion-text-capitalize ion-margin-top">
     Recommended
   </div>
-  <ion-row class="recommandeds-row">
+<ion-row class="recommandeds-row">
     <swiper [config]="bannerConfig" class="recommanded-courses">
       <ng-template swiperSlide *ngFor="let course of courses">
         <ion-card class="card" [routerLink]="[course.id]">
-          <img [src]="course.image_480x270" alt="course image" />
+          <img [src]="course.image" alt="course image" />
           <ion-card-content>
             <ion-card-subtitle class="ion-text-wrap" color="dark">{{course.title}}</ion-card-subtitle>
             <ion-card-subtitle>
-              <ion-icon *ngFor="let t of [1,2,3,4,5]" name="star" class="primary-color"></ion-icon>
+              <ion-icon  name="star" class="primary-color" slot="start"></ion-icon>
+              <ion-label> {{course.rating}} </ion-label>
             </ion-card-subtitle>
-            <ion-label>{{course.visible_instructors[0].name}}</ion-label>
+            <ion-label>{{course.author}}</ion-label>
             <ion-card-title class="primary-color"> {{course.price}} $</ion-card-title>
           </ion-card-content>
         </ion-card>
@@ -105,11 +98,11 @@
   </ion-row>
   <div class="section-text ion-text-capitalize ion-margin-top">
     Courses
-  </div>
+1  </div>
+<!-- 
   <div>
-
     <ion-list lines="none">
-      <ion-card *ngFor="let course of courses" class="card">
+      <ion-card *ngFor="let course of courses1" class="card">
         <ion-item>
           <ion-thumbnail class="ion-margin-end">
             <img [src]="course.image_480x270" />
@@ -123,9 +116,8 @@
         </ion-item>
       </ion-card>
     </ion-list>
-  </div>
+  </div> -->
 
 
-  
 
 </ion-content>

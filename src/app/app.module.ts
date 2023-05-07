@@ -7,10 +7,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-
+import { SwiperModule } from 'swiper/angular';
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { provideFirebaseApp,initializeApp } from "@angular/fire/app";
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import {provideStorage, getStorage} from '@angular/fire/storage'
 import { environment } from 'src/environments/environment';
 
 @NgModule({
@@ -19,10 +20,12 @@ import { environment } from 'src/environments/environment';
     BrowserModule,
     IonicModule.forRoot(), 
     AppRoutingModule,
+    SwiperModule,
     BrowserAnimationsModule,
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage())
   ],
 
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
