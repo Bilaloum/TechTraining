@@ -3,6 +3,7 @@ import { Firestore, collectionData,collection, doc, docData } from "@angular/fir
 import { Course } from '../../models/Course';
 import { Observable, map } from 'rxjs';
 import { Storage } from '@angular/fire/storage';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 // import { collection } from 'firebase/firestore';
 
 @Injectable({
@@ -11,21 +12,14 @@ import { Storage } from '@angular/fire/storage';
 export class CoursesService {
 
 
-  constructor(private firestore: Firestore, private fireStorage: Storage ) { }
+  constructor(private firestore: AngularFirestore, private fireStorage: Storage ) { }
 
   getCourses(){
-    
-    const coursesRef = collection(this.firestore, "courses");
-    let courses = collectionData(coursesRef,{idField: "id"})
-
-    return courses as Observable<Course[]>;
+    return this.firestore.collection("courses").get()
   }
 
-  getCourseById(id: string):Observable<Course>{
-    
-    const courseRef = doc(this.firestore,`courses/${id}`);
-
-    return docData(courseRef,{idField: "id"}) as Observable<Course>; 
+  getCourseById(id: string){
+    return this.firestore.doc(`courses/${id}`).get();
   }
 
   // getImageStorageUrl(image: any){

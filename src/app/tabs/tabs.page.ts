@@ -10,9 +10,9 @@ export class TabsPage {
 
   constructor(private loginService : AuthServiceService,) {}
 
-   isAuthenticated(){
+  isAuthenticated(){
       return this.loginService.isAuthenticated;
-    }
+  }
 
 
     }

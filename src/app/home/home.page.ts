@@ -17,7 +17,7 @@ export class HomePage implements OnInit {
     categoriesSwap: SwiperOptions; 
     categories: Category[];
     //courses1;
-    courses: Course[]
+    courses: any
     
     constructor(private router: Router, 
         private coursesService: CoursesService,
@@ -27,8 +27,7 @@ export class HomePage implements OnInit {
         this.coursesService.getCourses().subscribe( res => {
             this.courses = res;
             this.courses.forEach( c => {
-                console.log(c.image);
-                
+                console.log(c.image); 
             })
         })
 

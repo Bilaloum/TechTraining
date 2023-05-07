@@ -9,9 +9,8 @@ import { AppComponent } from './app.component';
 
 import { SwiperModule } from 'swiper/angular';
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
-import { provideFirebaseApp,initializeApp } from "@angular/fire/app";
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import {provideStorage, getStorage} from '@angular/fire/storage'
+import { AngularFirestoreModule} from "@angular/fire/compat/firestore";
+import { AngularFireModule } from "@angular/fire/compat";
 import { environment } from 'src/environments/environment';
 
 @NgModule({
@@ -23,9 +22,8 @@ import { environment } from 'src/environments/environment';
     SwiperModule,
     BrowserAnimationsModule,
     AngularFireAuthModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage())
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
 
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
