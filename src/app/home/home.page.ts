@@ -5,7 +5,8 @@ import { CoursesService } from '../Services/courses/courses.service';
 import { Course } from '../models/Course';
 import { CategoriesService } from '../Services/categories/categories.service';
 import { Category } from '../models/Category';
-import { map } from 'rxjs';
+import { Storage, getDownloadURL, ref } from '@angular/fire/storage';
+import { Auth } from 'firebase/auth';
 @Component({
     selector: 'app-home',
     templateUrl: './home.page.html',
@@ -15,28 +16,52 @@ export class HomePage implements OnInit {
 
     bannerConfig: SwiperOptions;
     categoriesSwap: SwiperOptions; 
-    categories: Category[];
-    //courses1;
-    courses: any
+
+    categories: Category[]; 
+    courses: Course[];
+    recomendedCourses:Course[];
+    user = null ;
     
-    constructor(private router: Router, 
+    constructor( 
         private coursesService: CoursesService,
         private categoriesService: CategoriesService,
+        private fireStorage:Storage
         ) { 
-        
-        this.coursesService.getCourses().subscribe( res => {
-            this.courses = res;
-            this.courses.forEach( c => {
-                console.log(c.image); 
+            //categories
+            this.categoriesService.getCetegories().subscribe(res => {
+                this.categories = res;
+                console.log(res);
             })
-        })
 
-        this.categoriesService.getCetegories().subscribe(res => {
-            this.categories = res;
-            console.log(res);
-        })
+            //recomended courses (get the TOP 5 ranked courses)
+            this.coursesService.getRecomendedCourses().subscribe( res => {
+                res.forEach(course => {
+                    const imgRef = ref(this.fireStorage,course.image);
+                    getDownloadURL(imgRef).then(res => {
+                        course.image = res
+                    })
+                })
+                
+                this.recomendedCourses = res;
+            })
+
+            //courses
+            this.coursesService.getCourses().subscribe( res => {
+                res.forEach(course => {
+                    const imgRef = ref(this.fireStorage,course.image);
+                    getDownloadURL(imgRef).then(res => {
+                        course.image = res
+                    })
+                })
+                
+                this.courses = res;
+            })
+        
+
     }
+    
     ngOnInit(): void {
+        
     // this.courses1 = [
     //         {
     //             "_class": "course",
@@ -238,18 +263,12 @@ export class HomePage implements OnInit {
         this.bannerConfig ={
         slidesPerView: 1.5,
         spaceBetween:10,
-        loop:true,
-        centeredSlides:true,
         }
 
         this.categoriesSwap = {
-        slidesPerView:1.5,
-        spaceBetween:10,
-        loop:true,
-        centeredSlides:true,
+        slidesPerView:2.5,
+        spaceBetween:5,
         }
     }
-
-
 
 }

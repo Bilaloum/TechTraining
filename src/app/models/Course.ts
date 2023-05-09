@@ -4,7 +4,7 @@ export interface Course {
     id: string,
     title: string,
     author: string,
-    image: any,
+    image: string,
     catrgory: Category,
     price: number,
     rating: number,
