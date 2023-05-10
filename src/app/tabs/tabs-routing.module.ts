@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -8,20 +9,22 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
+        
+        path: 'tab1',
+        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+      },
+      {
         path: 'home',
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
         path: 'home/:id',
-        loadChildren: () => import('../course-details/course-details.module').then( m => m.CourseDetailsPageModule)
+        loadChildren: () => import('../course-details/course-details.module').then( m => m.CourseDetailsPageModule),
+        canActivate:[AuthGuard],
       },
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
-      },
-      {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'Profile',
+        loadChildren: () => import('../Profile/Profile.module').then(m => m.Tab2PageModule)
       },
       {
         path: 'tab3',
@@ -29,17 +32,19 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

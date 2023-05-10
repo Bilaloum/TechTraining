@@ -13,6 +13,7 @@ import { provideFirebaseApp,initializeApp } from "@angular/fire/app";
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import {provideStorage, getStorage} from '@angular/fire/storage'
 import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     SwiperModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
