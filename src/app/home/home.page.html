@@ -65,7 +65,7 @@
     <ion-row>
       <swiper [config]="categoriesSwap">
           <ng-template swiperSlide *ngFor="let category of categories">
-            <ion-button class="ion-text-capitalize" expand="block">
+            <ion-button class="ion-text-capitalize" expand="block" [routerLink]="['/tabs/categories',category.id]">
               <ion-icon [name]="category.icon_name" color="light" slot="start"></ion-icon>
               {{category.name}}
             </ion-button>
@@ -110,7 +110,7 @@
               <ion-icon name="star" color="primary" slot="start"></ion-icon>
               {{course.rating}}
             </p>
-            <p>{{course.author}} </p>
+            <p> {{course.author}}</p>
             <p class="primary-color" >{{course.price | currency:"USD" }}</p>
           </ion-label>
         </ion-item>

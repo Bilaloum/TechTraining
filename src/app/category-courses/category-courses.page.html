@@ -1,0 +1,31 @@
+<ion-header>
+<ion-toolbar color="primary">
+  <ion-title class="ion-text-capitalize"> {{ category?.name }} </ion-title>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/tabs/categories"></ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+      <ion-list lines="none">
+        <ion-card *ngFor="let course of coursesByCategory" [routerLink]="[course.id]">
+          <ion-item>
+            <ion-thumbnail class="ion-margin-end">
+              <img [src]="course.image" alt="course image" />
+            </ion-thumbnail>
+            <ion-label class="ion-text-wrap">
+              {{course.title}}
+              <p>
+                <ion-icon name="star" color="primary" slot="start"></ion-icon>
+                {{course.rating}}
+              </p>
+              <p> {{course.author}} </p>
+              <p class="primary-color">{{course.price | currency:"USD" }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-list>
+    </div>
+</ion-content>

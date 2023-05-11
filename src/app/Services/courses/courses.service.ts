@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collectionData,collection, doc, docData, query, where, orderBy, limit, getDocs } from "@angular/fire/firestore";
+import { Firestore, collectionData,collection, doc, docData, query, where, orderBy, limit, getDocs, collectionGroup } from "@angular/fire/firestore";
 import { Course } from '../../models/Course';
 import { Observable, filter, map } from 'rxjs';
 import { Storage, ref } from '@angular/fire/storage';
@@ -37,20 +37,13 @@ export class CoursesService {
 
     return collectionData(q,{idField: "id"}) as Observable<Course[]>;
   }
-
-  // getCoursesByCategory(category: string):Observable<Course[]>{
-  //     const categoryRef = collection(this.firestore,"courses")
-      
-  // }
-  // async getImageUrl(imgPath: string){
-  //   try {
-  //     const imgRef = ref(this.fireStorage,imgPath);
-  //     await getDownloadURL(imgRef);
-
-  //   } catch (error) {
-  //     console.log("erro"+ error);  
-  //   }
+  
+  getCourseseByCategory(category_id: string):Observable<Course[]> {
     
-  // }
+    const coursesRef = collection(this.firestore, "courses");
+    const q = query(coursesRef, where("category","==",category_id));
+
+    return collectionData(q,{idField: "id"}) as Observable<Course[]>;
+  }
 
 }
