@@ -10,22 +10,7 @@
 <ion-content>
     <div>
       <ion-list lines="none">
-        <ion-card *ngFor="let course of coursesByCategory" [routerLink]="[course.id]">
-          <ion-item>
-            <ion-thumbnail class="ion-margin-end">
-              <img [src]="course.image" alt="course image" />
-            </ion-thumbnail>
-            <ion-label class="ion-text-wrap">
-              {{course.title}}
-              <p>
-                <ion-icon name="star" color="primary" slot="start"></ion-icon>
-                {{course.rating}}
-              </p>
-              <p> {{course.author}} </p>
-              <p class="primary-color">{{course.price | currency:"USD" }}</p>
-            </ion-label>
-          </ion-item>
-        </ion-card>
+        <ion-course-card *ngFor="let course of coursesByCategory" [course]="course" [routerLink]="[course.id]"></ion-course-card>
       </ion-list>
-    </div>
+    </div> 
 </ion-content>

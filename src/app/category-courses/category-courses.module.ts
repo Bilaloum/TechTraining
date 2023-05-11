@@ -7,14 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { CategoryCoursesPageRoutingModule } from './category-courses-routing.module';
 
 import { CategoryCoursesPage } from './category-courses.page';
+import { CourseCardModule } from '../components/course-card/course-card.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CategoryCoursesPageRoutingModule
+    CategoryCoursesPageRoutingModule,
+    CourseCardModule
   ],
   declarations: [CategoryCoursesPage]
 })
+
 export class CategoryCoursesPageModule {}

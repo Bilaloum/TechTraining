@@ -1,3 +1,16 @@
-<p>
-  course-card works!
-</p>
+    <ion-card class="card">
+      <ion-item>
+        <ion-thumbnail class="ion-margin-end">
+          <img [src]="course.image" alt="course image" />
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap course-title">
+          {{course.title}}
+          <p class="primary-color">
+            <ion-icon name="star" color="primary" slot="start"></ion-icon>
+            {{course.rating | number}}
+          </p>
+          <p> {{course.author}}</p>
+          <p class="primary-color " >{{course.price | currency:"USD" }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
