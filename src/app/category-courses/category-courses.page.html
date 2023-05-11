@@ -1,11 +1,5 @@
-<ion-header>
-<ion-toolbar color="primary">
-  <ion-title class="ion-text-capitalize"> {{ category?.name }} </ion-title>
-  <ion-buttons slot="start">
-    <ion-back-button defaultHref="/tabs/categories"></ion-back-button>
-  </ion-buttons>
-</ion-toolbar>
-</ion-header>
+
+<ion-details-header [title]="category?.name" defaultHref="/tabs/categories"></ion-details-header>
 
 <ion-content>
     <div>

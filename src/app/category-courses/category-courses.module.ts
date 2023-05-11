@@ -8,6 +8,7 @@ import { CategoryCoursesPageRoutingModule } from './category-courses-routing.mod
 
 import { CategoryCoursesPage } from './category-courses.page';
 import { CourseCardModule } from '../components/course-card/course-card.module';
+import { DetailsHeaderModule } from '../components/details-header/details-header.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { CourseCardModule } from '../components/course-card/course-card.module';
     FormsModule,
     IonicModule,
     CategoryCoursesPageRoutingModule,
-    CourseCardModule
+    CourseCardModule,
+    DetailsHeaderModule
   ],
   declarations: [CategoryCoursesPage]
 })

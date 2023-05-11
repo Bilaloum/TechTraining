@@ -1,11 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title> {{course?.title}} </ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/home/"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<ion-details-header [title]="course?.title" defaultHref="/tabs/home/"></ion-details-header>
 
 <ion-content class="ion-no-padding">
   <ion-card class="ion-no-margin">
