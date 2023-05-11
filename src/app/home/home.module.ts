@@ -9,6 +9,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { SwiperModule } from 'swiper/angular';
 import { CourseCardModule } from '../components/course-card/course-card.module';
+import { ProfileHeaderModule } from '../components/profile-header/profile-header.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { CourseCardModule } from '../components/course-card/course-card.module';
     IonicModule,
     HomePageRoutingModule,
     SwiperModule,
-    CourseCardModule
+    CourseCardModule,
+    ProfileHeaderModule
   ],
   declarations: [HomePage]
 })
