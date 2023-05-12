@@ -12,7 +12,7 @@ const routes: Routes = [
         path: 'tab1',
         loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
       },
-     
+      {
         path: 'home',
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
@@ -39,7 +39,6 @@ const routes: Routes = [
       {
         path: 'categories/:id/:id',
         loadChildren: () => import('../course-details/course-details.module').then( m => m.CourseDetailsPageModule),
-        canActivate:[AuthGuard],
       },
       {
         path: '',

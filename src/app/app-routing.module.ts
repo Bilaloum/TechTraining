@@ -20,11 +20,6 @@ path: '**',
  redirectTo:'/tabs/home',
  pathMatch:'full',
 },
-=======
-  {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
 
 ];
 @NgModule({
