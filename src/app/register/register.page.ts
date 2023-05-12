@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-import userEmailRegister from '../models/types/userRegister';
 import { style, transition, trigger ,animate} from '@angular/animations';
 import { Router } from '@angular/router';
 import { AuthServiceService } from '../Services/AuthServices/auth-service.service';
@@ -24,61 +22,26 @@ import { AuthServiceService } from '../Services/AuthServices/auth-service.servic
   ]
 })
 export class RegisterPage implements OnInit {
-/*
-  constructor(private RegisterService:AuthServiceService) { }
-
-ngOnInit() {
-}
-
-user:userEmailRegister ={
-  Email:'',
-  Password:'',
-  ConfirmedPassword:''
-}
-  
-
-register(){
-   if(this.user.ConfirmedPassword=="" || this.user.Email=="" || this.user.Password=="") {
-      console.log("Empty");
-      return;
-    }else if(this.user.ConfirmedPassword!=this.user.Password){
-      console.log("the password and the confirmed password are not the same !!");
-      return;
-    }else{
-        this.RegisterService.register(this.user);
-        this.user.Email="";
-        this.user.Password="";
-        this.user.ConfirmedPassword="";
-    }
-}
-*/
-
 constructor(
     public authService: AuthServiceService,
     public router: Router
   ) { }
 
   ngOnInit(){}
-  
   signUp(email, password,confirmedPassword){
     if(email.ConfirmedPassword=="" || password.Email=="" || confirmedPassword.Password=="") {
-      console.log("Empty");
+      window.alert("All fields are required. Please fill in all inputs.")
       return;
     }else if(email.ConfirmedPassword!=password.Password){
-      console.log("the password and the confirmed password are not the same !!");
+      window.alert("The password and confirmed password do not match.");
       return;
     }else{
        this.authService.RegisterUser(email.value, password.value)
       .then((res) => {
-        // Do something here
-        this.authService.SendVerificationMail()
-        this.router.navigate(['verify-email']);
+        this.authService.SendVerificationMail();
       }).catch((error) => {
         window.alert(error.message)
       })
-    }
-     
+    }  
   }
-
-
 }

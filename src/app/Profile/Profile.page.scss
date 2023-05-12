@@ -59,96 +59,57 @@ ion-content {
         top: 26%;
         left: 4%;
         right: 4%;
-
+        display: flex;
+        flex-direction: column;
 
         .form-wrapper {
-            box-shadow: none;
-            border-radius: 20px;
-            padding: 15px 10px;
+                box-shadow: none;
+                    border-radius: 20px;
+                    padding: 15px 10px;
+                ion-item {
+                        --background: #efefef;
+                        --padding-start: 10px;
+                        --highlight-height: 0;
+                        --border-width: 0;
+                        --padding-top: 0;
+                        --min-height: 40px;
+                        color: gray;
+                        margin-bottom: 15px;
+                        border-radius: 5px;
+                
+                        ion-icon {
+                                font-size: 18px;
+                                color: $primary-color;
+                            }
+                        
+                        ion-input {
+                                margin-left: 10px;
+                                font-size: 14px;
+                            }
 
-            ion-button {
-                height: 40px;
-                --box-shadow: none;
-                text-transform: initial;
-                font-size: 16px;
-                letter-spacing: 0;
-                font-weight: 400;
-                margin-bottom: 15px;
-            }
+                        }
 
-            .settings {
-                --background: #810CA8;
-            }
+                                        ion-button {
+                                            height: 40px;
+                                            --box-shadow: none;
+                                            text-transform: initial;
+                                            font-size: 16px;
+                                            letter-spacing: 0;
+                                            font-weight: 400;
+                                            margin-top: 15px;
+                                            border-radius: 5px;
 
-            .Loge-out {
-                --background: transparent;
-                border: solid 1px #810CA8;
-                color: #810CA8;
-            }
 
-            .line-text {
-                padding: 0 30px;
-                position: relative;
-                height: 20px;
-                margin-top: 30px;
+                                            ion-icon{
+                                                margin-left: -20px;
+                                            }
+                                        }
+                    
+                                        .submit-button {
+                                            
+                                        }
+                                        }
 
-                .lines {
-                    height: 1px;
-                    background: #858585;
-                    display: block;
+                        }
+
                 }
-
-                .text {
-                    position: absolute;
-                    top: -7px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: #fff;
-                    padding: 0 16px;
-                    font-size: 12px;
-                    font-weight: 500;
-                    color: #5e5e5e;
-                }
-            }
-
-
-
-            .socials {
-                display: flex;
-                justify-content: center;
-                padding: 5px;
-
-                ion-button {
-                    margin: 0 5px;
-                    --padding-start: 12px;
-                    --padding-end: 12px;
-
-                    ion-icon {
-                        font-size: 18px;
-                    }
-                }
-
-                .btn-fb {
-                    --background: #567aa3;
-                }
-
-                .btn-gb {
-                    --background: rgb(70, 70, 70);
-                }
-
-                .btn-go {
-                    --background: #fd684f;
-                }
-
-                .btn-ph {
-                    --background: #737373;
-                }
-
-            }
-
-
-        }
-
-
-    }
-}

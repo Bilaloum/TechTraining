@@ -1,115 +1,18 @@
-/*import { Injectable } from '@angular/core';
-import userEmailLogin from '../types/userLogin';
-import { Router } from '@angular/router';
-import { createUserWithEmailAndPassword, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword,signOut } from "firebase/auth";
-import userEmailRegister from '../types/userRegister';
-import { error } from 'console';
-
-
-@Injectable({
-  providedIn: 'root'
-})
-export class AuthServiceService {
-  constructor(private router : Router) { }
-
-
-  isAuthenticated:boolean=false;  
-  isLoading:boolean=true;
-
-  Credential :any;
-
-  
-    
-
-   // Sign In
-    login(User: userEmailLogin){
-        const auth = getAuth();
-        signInWithEmailAndPassword(auth,User.Email,User.Password )
-        .then((userCredential) => {
-          // Signed in 
-          const user = userCredential.user;
-          this.isAuthenticated=true;
-          this.router.navigate(['tabs/home']);
-          console.log(user);
-          this.Credential=user;
-          // ...
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-        }).finally(()=>this.isLoading=false);
-
-      };
-
-
-
-      // Sign Up
-      register(User :userEmailRegister){
-           this.isLoading=true;
-            const auth = getAuth();
-            createUserWithEmailAndPassword(auth, User.Email, User.Password)
-            .then((userCredential: any) => {
-              this.isAuthenticated=true;
-              this.router.navigate(['tabs/tab2'])
-              console.log(userCredential);
-               this.Credential=userCredential.user;
-            })
-            .catch((error) => {
-              const errorCode = error.code;
-              const errorMessage = error.message;
-              this.isAuthenticated=false;
-              // ..
-            }).finally(()=>this.isLoading=false);
-      }
-
-
-
-
-      // Sign Out
-      SignOut(){
-          const auth = getAuth();
-          signOut(auth).then(() => {
-            this.isAuthenticated=false;
-            this.router.navigate(['tabs/tab1']);
-             this.Credential=null;
-          }).catch((error) => {
-            // An error happened.
-          });
-      }
-
-
-
-     sendResetEmail(currentemail:string){
-         const auth = getAuth();
-         sendPasswordResetEmail(auth,currentemail).then(()=>{
-          currentemail="";
-          alert("congratulation!!!");
-         }).catch((error)=>{
-          console.log(error);
-         });
-     }
-
-
-
-
-}*/
-
-
+//Imports
 import { Injectable, NgZone } from '@angular/core';
 import * as auth from 'firebase/auth';
-
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import {
-  AngularFirestore,
-  AngularFirestoreDocument,
-} from '@angular/fire/compat/firestore';
+import {AngularFirestore,} from '@angular/fire/compat/firestore';
 import { User } from 'src/app/models/types/user';
-import { AuthGuard } from 'src/app/guards/auth.guard';
+
+
 @Injectable({
   providedIn: 'root',
 })
+
 export class AuthServiceService {
+  user:User;
   userData: any;
   constructor(
     public afStore: AngularFirestore,
@@ -117,7 +20,6 @@ export class AuthServiceService {
     public router: Router,
     public ngZone: NgZone
   ) {
-    console.log("construct");
     this.ngFireAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
@@ -130,44 +32,45 @@ export class AuthServiceService {
     });
   }
 
-
-  isLoggedIn:boolean=false;
-  isEmailVerified:boolean=false;
+public isAuth:boolean=false;
 
    // Returns true when user is looged in
- /* get isLoggedIn(): boolean {
+ get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
-    return user !== null && user.emailVerified !== false ? true : false;
-  }*/
+    return user !== null  !== false ? true : false;
+  }
 
   // Returns true when user's email is verified
-  /* get isEmailVerified(): boolean {
+  
+ get isEmailVerified(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
     console.log(user.emailVerified);
     return user.emailVerified ;
   }
-*/
+
   // Login in with email/password
   SignIn(email, password) {
     return this.ngFireAuth.signInWithEmailAndPassword(email, password).then(()=>{
-      this.isLoggedIn=true;
-      this.router.navigate(['/tabs/home']);
+      this.isAuth=true;
     });
   }
 
   // Register user with email/password
   RegisterUser(email, password) {
-    return this.ngFireAuth.createUserWithEmailAndPassword(email, password);
+    return this.ngFireAuth.createUserWithEmailAndPassword(email, password).then((result)=>{
+      this.router.navigate(['/tab1/register/verify-email']);
+    });
   }
   // Email verification when new user register
   SendVerificationMail() {
     return this.ngFireAuth.currentUser.then((user) => {
       return user.sendEmailVerification().then(() => {
-        this.router.navigate(['/tabs/tab1/verify-email']);
+        this.SetUserData(user);
+      }).catch((error)=>{
+        window.alert("Failed to send message to this email.");
       });
     });
   }
-
 
   // Recover password
   PasswordRecover(passwordResetEmail) {
@@ -179,14 +82,11 @@ export class AuthServiceService {
         );
       })
       .catch((error) => {
-        window.alert(error);
+        window.alert('This email is not associated with any account.');
       });
   }
 
-
- 
-
-  // Sign in with Gmail
+  // Sign in with Google 
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider());
   }
@@ -196,22 +96,32 @@ export class AuthServiceService {
     return this.ngFireAuth
       .signInWithPopup(provider)
       .then((result) => {
+
+          const db = this.afStore;
+          var userRef = db.collection('users').doc(result.user.uid);
+
+          if(!userRef){
+          this.SetUserData(result.user);
+          }else{
+            console.log(userRef);
+          }
+
         this.ngZone.run(() => {
-          this.isLoggedIn=true;
-          this.router.navigate(['/tabs/home']);
+          this.router.navigate(['/tabs//home']);
         });
-        this.SetUserData(result.user);
       })
       .catch((error) => {
         window.alert(error);
       });
   }
-  
-  // Store user in localStorage
+
+  // Store the new user as a document in users collectin  at fierstore 
   SetUserData(user) {
-    const userRef: AngularFirestoreDocument<any> = this.afStore.doc(
-      `users/${user.uid}`
-    );
+
+  const db = this.afStore;
+  var userRef = db.collection('users').doc(user.uid);
+
+  
     const userData: User = {
       uid: user.uid,
       email: user.email,
@@ -222,20 +132,41 @@ export class AuthServiceService {
     return userRef.set(userData, {
       merge: true,
     });
+  
+  
+    
   }
+
   // Sign-out
   SignOut() {
     return this.ngFireAuth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.isLoggedIn=false;
-      this.router.navigate(['tabs/tab1']);
+      this.router.navigate(['/tab1']);
     });
+  }
+
+  getUser() : any{
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user !== null) {
+        return this.afStore.collection('users').doc(user.uid).get();
+    }
+  }
+
+  UpdeteUserDate(Name,URL){
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user !== null) {
+        this.afStore.collection('users').doc(user.uid).update({
+          displayName:Name as string,photoURL:URL as string
+          }).then(()=>{
+          
+          }).catch((error)=>{
+            console.log(error);
+          })
+
+    }
+    
+    
   }
 }
 
 
-
-
-/*
-The constructor subscribes to the authState observable of the ngFireAuth service. The authState observable emits an event whenever the authentication state of the user changes, for example, when a user logs in or logs out. The subscribe method takes a callback function that is called whenever the authState observable emits an event.
-*/ 

@@ -4,6 +4,7 @@ import userEmailLogin from '../models/types/userLogin';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Router } from '@angular/router';
 import { AuthServiceService } from '../Services/AuthServices/auth-service.service';
+import { error } from 'console';
 
 @Component({
   selector: 'app-login',
@@ -24,29 +25,6 @@ import { AuthServiceService } from '../Services/AuthServices/auth-service.servic
   ]
 })
 export class LoginPage implements OnInit {
-/*
-  constructor(private loginService:AuthServiceService) { }
-
-  ngOnInit() {
-  }
-
- 
-
-
-  isLoading():boolean{
-    return this.loginService.isLoading;
-  }
-*/
- /* login(){
-    if(this.user.Email=="" || this.user.Password=="") {
-      console.log("Empty");
-      return;
-    }
-       this.loginService.(this.user);
-       this.user.Email="";
-        this.user.Password="";
-  }*/
-
 
    constructor(
     public authService: AuthServiceService,
@@ -59,11 +37,12 @@ export class LoginPage implements OnInit {
    // Login function
 
   logIn(email, password) {
-    this.authService.SignIn(email.value, password.value);
+    this.authService.SignIn(email.value, password.value).then(()=>{
+      this.authService.isAuth=true;
+      this.router.navigate(['/tabs/home']);
+      //this.authService.getUserCredentials();
+    }).catch((error)=>{
+      alert("username or password are not correcte !!")
+    });
   }
-
-
-
-
-
 }
