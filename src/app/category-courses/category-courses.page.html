@@ -1,0 +1,10 @@
+
+<ion-details-header [title]="category?.name" defaultHref="/tabs/categories"></ion-details-header>
+
+<ion-content>
+    <div>
+      <ion-list lines="none">
+        <ion-course-card *ngFor="let course of coursesByCategory" [course]="course" [routerLink]="[course.id]"></ion-course-card>
+      </ion-list>
+    </div> 
+</ion-content>

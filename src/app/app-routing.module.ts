@@ -4,6 +4,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { LoggedInAuthGuardGuard } from './guards/logged-in-auth-guard.guard';
 
 const routes: Routes = [
+
 {
   path: 'tabs',
   canActivate: [AuthGuard],
@@ -19,6 +20,12 @@ path: '**',
  redirectTo:'/tabs/home',
  pathMatch:'full',
 },
+=======
+  {
+    path: '',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+
 ];
 @NgModule({
   imports: [

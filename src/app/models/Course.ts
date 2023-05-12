@@ -5,7 +5,7 @@ export interface Course {
     title: string,
     author: string,
     image: string,
-    catrgory: Category,
+    catrgory: string,
     price: number,
     rating: number,
 }

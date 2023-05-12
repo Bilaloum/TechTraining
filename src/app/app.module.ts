@@ -12,8 +12,13 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import {provideStorage, getStorage} from '@angular/fire/storage'
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
+
 import { AuthGuard } from './guards/auth.guard';
 import { LoggedInAuthGuardGuard } from './guards/logged-in-auth-guard.guard';
+
+import { CourseCardComponent } from './components/course-card/course-card.component';
+import { CourseCardModule } from './components/course-card/course-card.module';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +32,8 @@ import { LoggedInAuthGuardGuard } from './guards/logged-in-auth-guard.guard';
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    CourseCardModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AuthGuard,LoggedInAuthGuardGuard],
   bootstrap: [AppComponent],

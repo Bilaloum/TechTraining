@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CourseDetailsPageRoutingModule } from './course-details-routing.module';
+import { CategoryCoursesPageRoutingModule } from './category-courses-routing.module';
 
-import { CourseDetailsPage } from './course-details.page';
+import { CategoryCoursesPage } from './category-courses.page';
+import { CourseCardModule } from '../components/course-card/course-card.module';
 import { DetailsHeaderModule } from '../components/details-header/details-header.module';
 
 @NgModule({
@@ -14,9 +15,11 @@ import { DetailsHeaderModule } from '../components/details-header/details-header
     CommonModule,
     FormsModule,
     IonicModule,
-    CourseDetailsPageRoutingModule,
+    CategoryCoursesPageRoutingModule,
+    CourseCardModule,
     DetailsHeaderModule
   ],
-  declarations: [CourseDetailsPage]
+  declarations: [CategoryCoursesPage]
 })
-export class CourseDetailsPageModule {}
+
+export class CategoryCoursesPageModule {}

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData, doc, docData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Category } from '../../models/Category';
 
@@ -14,6 +14,11 @@ export class CategoriesService {
   getCetegories():Observable<Category[]>{
     const categoriesRef = collection(this.firestore, "categories");
     return collectionData(categoriesRef,{idField: "id"}) as Observable<Category[]>;
+  }
+
+  getCategoryById(id: string): Observable<Category> {
+    const ctaegoryRef = doc(this.firestore,`categories/${id}`);
+    return docData(ctaegoryRef, {idField: "id"}) as Observable<Category>;
   }
 
 

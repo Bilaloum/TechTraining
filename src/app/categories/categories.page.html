@@ -1,0 +1,18 @@
+<!-- using the reused component  -->
+<ion-profile-header 
+[profileImg]="'https://ionicframework.com/docs/img/demos/avatar.svg'"
+  [userName]="'Bilal'">
+</ion-profile-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center">
+    <ion-col *ngFor="let category of categories">
+      <ion-card [style]="'background-image: url('+category.image+')'" [routerLink]="[category.id]">
+          <ion-card-content class="ion-align-self-center">
+            <ion-card-title class="ion-text-capitalize ion-text-wrap title"> {{category.name}} </ion-card-title>
+          </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

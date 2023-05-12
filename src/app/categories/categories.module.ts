@@ -4,11 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { CategoriesPageRoutingModule } from './categories-routing.module';
 
-import { HomePage } from './home.page';
-import { SwiperModule } from 'swiper/angular';
-import { CourseCardModule } from '../components/course-card/course-card.module';
+import { CategoriesPage } from './categories.page';
 import { ProfileHeaderModule } from '../components/profile-header/profile-header.module';
 
 @NgModule({
@@ -16,11 +14,9 @@ import { ProfileHeaderModule } from '../components/profile-header/profile-header
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
-    SwiperModule,
-    CourseCardModule,
+    CategoriesPageRoutingModule,
     ProfileHeaderModule
   ],
-  declarations: [HomePage]
+  declarations: [CategoriesPage]
 })
-export class HomePageModule {}
+export class CategoriesPageModule {}

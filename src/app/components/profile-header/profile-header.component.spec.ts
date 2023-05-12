@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CtagoriesSlidesComponent } from './ctagories-slides.component';
+import { ProfileHeaderComponent } from './profile-header.component';
 
-describe('CtagoriesSlidesComponent', () => {
-  let component: CtagoriesSlidesComponent;
-  let fixture: ComponentFixture<CtagoriesSlidesComponent>;
+describe('ProfileHeaderComponent', () => {
+  let component: ProfileHeaderComponent;
+  let fixture: ComponentFixture<ProfileHeaderComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CtagoriesSlidesComponent ],
+      declarations: [ ProfileHeaderComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CtagoriesSlidesComponent);
+    fixture = TestBed.createComponent(ProfileHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
