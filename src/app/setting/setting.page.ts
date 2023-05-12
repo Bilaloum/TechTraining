@@ -28,38 +28,11 @@ export class SettingPage implements OnInit {
 
   ngOnInit() {
   }
-  /* 
-  curentEmail='';
-
-  checkBeforeNavigate(){
-    if(this.loginService.isAuthenticated==true){
-     this.router.navigate(['/tabs/tab2']);
-    }else{
-     this.router.navigate(['../']);
-    }
-  }
-
-  ResetEmail(){
-    this.loginService.sendResetEmail(this.curentEmail);
-  }
-*/
+ 
 
 
  ResetEmail(email){
-    this.loginService.PasswordRecover(email.value)
+    this.loginService.PasswordRecover(email.value);
   }
-
-  checkBeforeNavigate(){
-    if(this.loginService.isLoggedIn==true){
-     this.router.navigate(['./tabs/Profile']);
-    }else{
-     this.router.navigate(['./tabs/tab1/login']);
-    }
-  }
-
-
-
-
-
 
 }

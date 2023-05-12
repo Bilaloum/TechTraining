@@ -7,6 +7,7 @@ import { CategoriesService } from '../Services/categories/categories.service';
 import { Category } from '../models/Category';
 import { Storage, getDownloadURL, ref } from '@angular/fire/storage';
 import { Auth } from 'firebase/auth';
+import { AuthServiceService } from '../Services/AuthServices/auth-service.service';
 @Component({
     selector: 'app-home',
     templateUrl: './home.page.html',
@@ -25,7 +26,8 @@ export class HomePage implements OnInit {
     constructor( 
         private coursesService: CoursesService,
         private categoriesService: CategoriesService,
-        private fireStorage:Storage
+        private fireStorage:Storage,
+        private authService : AuthServiceService
         ) { 
             //categories
             this.categoriesService.getCetegories().subscribe(res => {
@@ -61,7 +63,7 @@ export class HomePage implements OnInit {
     }
     
     ngOnInit(): void {
-        
+       // this.authService.getUserCredentials();
     // this.courses1 = [
     //         {
     //             "_class": "course",
@@ -256,9 +258,13 @@ export class HomePage implements OnInit {
     //         },
     // ]
 
+    
 
     }
 
+
+
+  
     ngAfterContentChecked(): void {
         this.bannerConfig ={
         slidesPerView: 1.5,

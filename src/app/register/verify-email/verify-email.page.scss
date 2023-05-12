@@ -3,7 +3,6 @@ $secondary-color: #C147E9;
 $tertiary-color: #E5B8F4;
 
 ion-content {
-
     #header {
         height: 33%;
         background: $primary-color;
@@ -17,141 +16,90 @@ ion-content {
         #app-bar {
             height: 60px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
 
-
+            ion-icon {
+                font-size: 24px;
+                margin-left: -5px;
+            }
 
             #logo {
-                width: 80px;
-                height: 80px;
+                width: 30px;
+                height: 30px;
                 background-color: #fff;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border-radius: 50%;
+                border-radius: 10px;
                 align-self: center;
-                border: solid black 1px;
 
                 img {
-                    width: 90%;
-                    border-radius: 50%;
+                    width: 70%;
                 }
             }
         }
-
-
-        h1 {
-            font-size: 19px;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-
-        p {
-            font-size: 15px;
-            line-height: 1.4;
-            text-align: center;
-        }
     }
 
-    .wrapper {
+    div{
+
+    
+    ion-grid {
         position: absolute;
-        top: 26%;
+        top: 28%;
         left: 4%;
         right: 4%;
+        background: #efefef;
+        border-radius: 5px;
+       
 
-
-        .form-wrapper {
-            box-shadow: none;
-            border-radius: 20px;
-            padding: 15px 10px;
-
-            ion-button {
-                height: 40px;
-                --box-shadow: none;
-                text-transform: initial;
-                font-size: 16px;
-                letter-spacing: 0;
-                font-weight: 400;
+    ion-row {
+            --padding-start: 10px;
+                --highlight-height: 0;
+                --border-width: 0;
+                --padding-top: 0 --min-height:40px;
+                color: gray;
                 margin-bottom: 15px;
-            }
-
-            .sign-in {
-                --background: #810CA8;
-            }
-
-            .sign-up {
-                --background: transparent;
-                border: solid 1px #810CA8;
-                color: #810CA8;
-            }
-
-            .line-text {
-                padding: 0 30px;
-                position: relative;
-                height: 20px;
-                margin-top: 30px;
-
-                .lines {
-                    height: 1px;
-                    background: #858585;
-                    display: block;
-                }
-
-                .text {
-                    position: absolute;
-                    top: -7px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: #fff;
-                    padding: 0 16px;
-                    font-size: 12px;
-                    font-weight: 500;
-                    color: #5e5e5e;
-                }
-            }
-
-
-
-            .socials {
                 display: flex;
                 flex-direction: column;
-                justify-content: stretch;
+                
+                h2{
+                    font-size: 19px;
+                    margin-bottom: 5px;
+                    margin-left: 5px;
+                    text-align: center;
+                }
 
-                padding: 5px;
+                p{
+                    font-size: 15px;
+                    line-height: 1.4;
+                    margin-left: 5px;
+                    text-align: center;
+                }
+           
 
                 ion-button {
-                    margin: 0 5px;
-                    --padding-start: 12px;
-                    --padding-end: 12px;
-
-                    ion-icon {
-                        font-size: 18px;
+                        height: 40px;
+                        --box-shadow: none;
+                        text-transform: initial;
+                        font-size: 16px;
+                        letter-spacing: 0;
+                        font-weight: 400;
+                        
                     }
-                }
-
-                .btn-fb {
-                    --background: #567aa3;
-                }
-
-                .btn-gb {
-                    --background: rgb(70, 70, 70);
-                }
-
-                .btn-go {
-                    --background: #fd684f;
-
-                }
-
-                .btn-ph {
-                    --background: #737373;
-                }
+               
+                       .submit {
+                       --background: #810CA8;
+                         }
 
             }
 
 
+        }   
+
+            
         }
 
 
-    }
+       
 }
