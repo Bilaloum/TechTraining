@@ -2,41 +2,57 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 
+
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
-      {
-        path: 'home',
-        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
-      },
       {
         path: 'tab1',
         loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'home',
+        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'home/:id',
+        loadChildren: () => import('../course-details/course-details.module').then(m => m.CourseDetailsPageModule)
+      },
+      {
+        path: 'Profile',
+        loadChildren: () => import('../Profile/Profile.module').then(m => m.Tab2PageModule)
+      },
+      {
+        path: 'panier',
+        loadChildren: () => import('../panier/panier.module').then(m => m.PanierPageModule)
+      },
+      {
+        path: 'categories',
+        loadChildren: () => import('../categories/categories.module').then( m => m.CategoriesPageModule),
+      },
+      {
+        path: 'categories/:id',
+        loadChildren: () => import('../category-courses/category-courses.module').then( m => m.CategoryCoursesPageModule)
+      },
+      {
+        path: 'categories/:id/:id',
+        loadChildren: () => import('../course-details/course-details.module').then( m => m.CourseDetailsPageModule),
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
 })

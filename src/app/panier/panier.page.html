@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Panier
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Panier</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-list lines="none">
+      <ion-card *ngFor="let course of coursesUser" class="card">
+        <ion-item>
+          <ion-thumbnail class="ion-margin-end">
+            <img [src]="course.image" alt="course image" />
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+            {{course.title}}
+            <p color="primary-color">{{course.price}} $</p>
+          </ion-label>
+        </ion-item>
+        <ion-card-content class="ion-margin-top">
+            <ion-button fill="outline" >Acheter</ion-button>
+            <ion-button fill="clear" (click) = "DeleteCourseFromCart(course.title)" >Supprimer</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+
+  </ion-content>

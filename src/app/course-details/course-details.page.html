@@ -1,0 +1,29 @@
+<ion-details-header [title]="course?.title" defaultHref="/tabs/home/"></ion-details-header>
+
+<ion-content class="ion-no-padding">
+  <ion-card class="ion-no-margin">
+    <img  [src]="course?.image" width="100%"/>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-card-title >{{course?.title}} </ion-card-title>
+      </ion-item>
+      <ion-item lines="none" class="ion-no-margin">
+        <p class="primary-color">
+        <ion-icon name="star" slot="start" color="primary"></ion-icon>
+        {{ course?.rating }}
+        </p>
+      </ion-item>
+      <ion-item lines="none">
+        <p class="ion-text-wrap"> by {{ course?.author }}</p>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label color="primary"> {{ course?.price | currency:"USD" }}</ion-label>
+      </ion-item>
+      <ion-button expand="block"  *ngIf="!isCourseExist(course.title)" (click) = "addCourseToCart(course.title)" class="ion-text-capitalize"> Enroll</ion-button>
+      <ng-template   *ngIf="isCourseExist(course.title)" >
+        <p>Element deja existe dans le panier</p>
+        <ion-button expand="block" [routerLink] = "['/panier']"  class="ion-text-capitalize">Panier</ion-button>
+      </ng-template>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

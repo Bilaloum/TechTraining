@@ -1,0 +1,30 @@
+.home-head {
+  height: 100px;
+  background-image: url("../../assets/online-learning-illustration-Converted.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ion-content .section-text {
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+ion-content .recommandeds-row {
+  padding: 0px;
+  margin: 2px 0 10px 0;
+}
+ion-content .recommandeds-row .recommanded-courses {
+  width: 100%;
+}
+ion-content .recommandeds-row .recommanded-courses .card {
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
+}
+ion-content .recommandeds-row .recommanded-courses:focus {
+  background-color: blue;
+}
+ion-content ion-list .card {
+  cursor: pointer;
+}/*# sourceMappingURL=home.page.css.map */
