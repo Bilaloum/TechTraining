@@ -1,30 +1,29 @@
 <!-- using the reused component  -->
-<ion-profile-header [profileImg]="photoURL" [userName]="displayName"></ion-profile-header>
+<!--<ion-profile-header [profileImg]="photoURL" [userName]="displayName"></ion-profile-header>-->
 
 <ion-content [fullscreen]="true">
   <ion-card class="home-head">
     <ion-card-content></ion-card-content>
   </ion-card>
- 
+
   <div class="section-text ion-text-capitalize ion-margin-top title">
     categories
   </div>
-  
-    <ion-row>
-      <swiper [config]="categoriesSwap">
-          <ng-template swiperSlide *ngFor="let category of categories">
-            <ion-button class="ion-text-capitalize" expand="block" [routerLink]="['/tabs/categories',category.id]">
-              <ion-icon [name]="category.icon_name" color="light" slot="start"></ion-icon>
-              {{category.name}}
-            </ion-button>
-          </ng-template>
-      </swiper>  
-    </ion-row>
-    
+<ion-row>
+  <swiper [config]="categoriesSwap">
+    <ng-template swiperSlide *ngFor="let category of categories">
+      <ion-button class="ion-text-capitalize" expand="block" [routerLink]="['/tabs/categories',category.id]">
+        <ion-icon [name]="category.icon_name" color="light" slot="start"></ion-icon>
+        {{category.name}}
+      </ion-button>
+    </ng-template>
+  </swiper>
+</ion-row>
+
   <div class="section-text ion-text-capitalize ion-margin-top title">
     Recommended
   </div>
-<ion-row class="recommanded-row">
+  <ion-row class="recommanded-row">
     <swiper [config]="bannerConfig" class="recommanded-courses">
       <ng-template swiperSlide *ngFor="let r_course of recomendedCourses">
         <ion-card class="card" [routerLink]="[r_course.id]">
@@ -32,7 +31,7 @@
           <ion-card-content>
             <ion-card-title class="ion-text-wrap" color="dark">{{r_course.title}}</ion-card-title>
             <p class="primary-color">
-              <ion-icon  name="star" color="primary" slot="start"></ion-icon>
+              <ion-icon name="star" color="primary" slot="start"></ion-icon>
               {{ r_course.rating }}
             </p>
             <p>{{r_course.author}}</p>
@@ -45,10 +44,10 @@
   <div class="section-text ion-text-capitalize ion-margin-top title">
     Courses
   </div>
-<div>
-  <ion-list lines="none">
-    <ion-course-card *ngFor="let course of courses" [course]="course" [routerLink]="course.id"></ion-course-card>
-  </ion-list>
-</div>
+  <div>
+    <ion-list lines="none">
+      <ion-course-card *ngFor="let course of courses" [course]="course" [routerLink]="course.id"></ion-course-card>
+    </ion-list>
+  </div>
 
 </ion-content>
