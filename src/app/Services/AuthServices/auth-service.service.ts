@@ -97,7 +97,7 @@ public isAuth:boolean=false;
       .signInWithPopup(provider)
       .then((result) => {
 
-          const db = this.afStore;
+          /*const db = this.afStore;
           var userRef = db.collection('users').doc(result.user.uid);
 
           if(!userRef){
@@ -105,6 +105,10 @@ public isAuth:boolean=false;
           }else{
             console.log(userRef);
           }
+*/
+
+           this.SetUserData(result.user);
+
 
         this.ngZone.run(() => {
           this.router.navigate(['/tabs//home']);
