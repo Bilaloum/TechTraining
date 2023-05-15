@@ -32,7 +32,7 @@ export class HomePage implements OnInit {
         private authService : AuthServiceService,
         public navCtrl: NavController,
         ) { 
-               this.InisialiseUserDate();
+              // this.InisialiseUserDate();
             //categories
             this.categoriesService.getCetegories().subscribe(res => {
                 this.categories = res;
@@ -72,17 +72,17 @@ export class HomePage implements OnInit {
     
   
     ngOnInit(): void {}
-
+/*
   photoURL:string;
   displayName:string;
- 
+ */
 
-
+/*
     ionViewWillEnter() {
     this.InisialiseUserDate()
    }
-
-
+*/
+/*
    InisialiseUserDate(){
     console.log("initialised");
     this.authService.getUser().subscribe((profile)=> {
@@ -90,6 +90,8 @@ export class HomePage implements OnInit {
       this.photoURL= profile.data().photoURL?profile.data().photoURL:'https://ionicframework.com/docs/img/demos/avatar.svg';
     });
 }
+
+*/
 
 
   

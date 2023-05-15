@@ -105,13 +105,13 @@ public isAuth:boolean=false;
           }else{
             console.log(userRef);
           }
-*/
+         */
 
            this.SetUserData(result.user);
-
+          // this.router.navigate(['/tabs//home']);
 
         this.ngZone.run(() => {
-          this.router.navigate(['/tabs//home']);
+        this.router.navigate(['/tabs/home']);
         });
       })
       .catch((error) => {

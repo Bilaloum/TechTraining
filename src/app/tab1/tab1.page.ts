@@ -26,6 +26,7 @@ export class Tab1Page  {
    GoogleAuth(){
       this.authService.GoogleAuth().then(()=>{
       this.authService.isAuth=true;
+      console.log("google")
       this.router.navigate(['/tabs/home']);
     }).catch((error)=>{
            console.log(error);
