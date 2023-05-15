@@ -20,11 +20,6 @@ export class CourseDetailsPage implements OnInit {
     private fireStorage: Storage,
     private panierService : PanierService
   
-  course: Course;
-  
-  constructor(private activatedRoute: ActivatedRoute,
-    private coursesService: CoursesService,
-    private fireStorage: Storage
     ) { 
     
   }
@@ -42,6 +37,8 @@ export class CourseDetailsPage implements OnInit {
             }
           })
         })
+        })
+      
 
       this.coursesService.getCourseById(course_id).subscribe(res => {
         
@@ -55,15 +52,17 @@ export class CourseDetailsPage implements OnInit {
   }
 
 
+
   addCourseToCart(title:string){
     this.panierService.addCourseToCart(title);
   }
 
 }
+
+
 function isCourseExist(title: any, string: any) {
   throw new Error('Function not implemented.');
 }
 
-  }
 
-}
+  
