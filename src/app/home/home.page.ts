@@ -9,6 +9,7 @@ import { Auth } from 'firebase/auth';
 import { AuthServiceService } from '../Services/AuthServices/auth-service.service';
 import { NavController } from '@ionic/angular';
 
+
 @Component({
     selector: 'app-home',
     templateUrl: './home.page.html',
@@ -28,15 +29,10 @@ export class HomePage implements OnInit {
         private coursesService: CoursesService,
         private categoriesService: CategoriesService,
         private fireStorage:Storage,
-        private authService : AuthServiceService
-        ) { 
-            //categories
-            this.categoriesService.getCetegories().subscribe(res => {
-                this.categories = res;
         private authService : AuthServiceService,
         public navCtrl: NavController,
         ) { 
-              // this.InisialiseUserDate();
+               this.InisialiseUserDate();
             //categories
             this.categoriesService.getCetegories().subscribe(res => {
                 this.categories = res;
@@ -76,19 +72,17 @@ export class HomePage implements OnInit {
     
   
     ngOnInit(): void {}
-/*
+
   photoURL:string;
   displayName:string;
- */
+ 
 
 
-/*
     ionViewWillEnter() {
     this.InisialiseUserDate()
    }
-*/
-              
-/*
+
+
    InisialiseUserDate(){
     console.log("initialised");
     this.authService.getUser().subscribe((profile)=> {
@@ -97,7 +91,6 @@ export class HomePage implements OnInit {
     });
 }
 
-*/
 
   
     ngAfterContentChecked(): void {
@@ -112,5 +105,9 @@ export class HomePage implements OnInit {
             spaceBetween:5,
         }
     }
+
+
+
+
 
 }
