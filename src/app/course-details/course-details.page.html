@@ -19,11 +19,11 @@
       <ion-item lines="none">
         <ion-label color="primary"> {{ course?.price | currency:"USD" }}</ion-label>
       </ion-item>
-      <ion-button expand="block"  *ngIf="!isCourseExist(course.title)" (click) = "addCourseToCart(course.title)" class="ion-text-capitalize"> Enroll</ion-button>
-      <ng-template   *ngIf="isCourseExist(course.title)" >
-        <p>Element deja existe dans le panier</p>
-        <ion-button expand="block" [routerLink] = "['/panier']"  class="ion-text-capitalize">Panier</ion-button>
-      </ng-template>
+      <ion-button expand="block"  *ngIf="!isExist" (click) = "addCourseToCart(course.title)" class="ion-text-capitalize"> Enroll</ion-button>
+      <div   *ngIf="isExist" >
+        <h2>Element deja existe dans le panier</h2>
+        <ion-button expand="block" [routerLink] = "['/tabs/panier']"  class="ion-text-capitalize">Voir Panier</ion-button>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -13,6 +13,7 @@ import { PanierService } from '../Services/Panier/panier.service';
 export class CourseDetailsPage implements OnInit {
   panierTitles : string[];
   course: Course;
+  isExist : boolean = false;
   
   constructor(private activatedRoute: ActivatedRoute,
     private coursesService: CoursesService,
@@ -24,8 +25,18 @@ export class CourseDetailsPage implements OnInit {
   ngOnInit() {
     const course_id = this.activatedRoute.snapshot.paramMap.get("id");
       
+
       this.coursesService.getCourseById(course_id).subscribe(res => {
         
+        this.panierService.getPanierTitles().subscribe(res1 =>{
+          res1.map((titLe) =>{
+            console.log(titLe)
+            if(titLe == res.title ){
+              this.isExist = !this.isExist;
+            }
+          })
+        })
+
         const imgRef = ref(this.fireStorage,res.image);
         getDownloadURL(imgRef).then(img => {
                         res.image = img
@@ -33,17 +44,16 @@ export class CourseDetailsPage implements OnInit {
         this.course = res;
       })
 
-      this.panierService.getPanierTitles().subscribe(res =>{
-        this.panierTitles = res
-      })
+
   }
+
 
   addCourseToCart(title:string){
     this.panierService.addCourseToCart(title);
   }
 
-  isCourseExist(title:string): boolean {
-    return this.panierTitles.includes(title);
-  }
-
 }
+function isCourseExist(title: any, string: any) {
+  throw new Error('Function not implemented.');
+}
+

@@ -24,18 +24,12 @@ export class PanierService {
     return this.db.collection<Course>('courses').valueChanges({ idField: 'id' });
   }
 
-  getCoursesById(id_courses){
-
-  }
-
-
-
 
   // creer le panier
   CreateCart() {
     const id = this.getUserId();
     const cartRef = this.db.collection('cart').doc(id);
-    cartRef.set({}); // create an empty document with the specified ID
+    cartRef.set({});
   }
 
 
@@ -45,6 +39,14 @@ export class PanierService {
     const auth = getAuth();
     const user = auth.currentUser;
     return user.uid;
+  }
+
+  checkCart(){
+    this.getCart().subscribe((res)=>{
+      if(!res){
+        this.CreateCart();
+      }
+    })
   }
 
 

@@ -17,6 +17,8 @@ export class PanierPage {
 
   ngOnInit(){
 
+      this.sr.checkCart();
+
      this.sr.justTest().subscribe(data =>{
       data.forEach(course => {
         const imgRef = ref(this.fireStorage,course.image);
