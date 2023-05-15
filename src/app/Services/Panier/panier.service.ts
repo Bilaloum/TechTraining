@@ -91,11 +91,7 @@ export class PanierService {
 
 
   getCoursesCart(){
-    this.getCart().pipe(
-      map(data =>{
-        console.log(data)
-      })
-    )
+    this.getCart()
   }
 
   getCoursesForUser(): Observable<Course[]> {

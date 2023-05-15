@@ -4,8 +4,7 @@ import userEmailLogin from '../models/types/userLogin';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Router } from '@angular/router';
 import { AuthServiceService } from '../Services/AuthServices/auth-service.service';
-import { error } from 'console';
-
+import { PanierService } from "../Services/Panier/panier.service";
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -28,7 +27,8 @@ export class LoginPage implements OnInit {
 
    constructor(
     public authService: AuthServiceService,
-    public router: Router
+    public router: Router,
+    private panierService:PanierService
   ) {}
 
 
@@ -39,6 +39,7 @@ export class LoginPage implements OnInit {
   logIn(email, password) {
     this.authService.SignIn(email.value, password.value).then(()=>{
       this.authService.isAuth=true;
+      this.panierService.checkCart()
       this.router.navigate(['/tabs/home']);
       //this.authService.getUserCredentials();
     }).catch((error)=>{

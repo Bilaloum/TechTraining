@@ -50,7 +50,6 @@ export class Tab2Page implements OnInit {
    
 
   InisialiseUserDate(){
-    console.log("initialised");
     this.loginService.getUser().subscribe((profile)=> {
       this.displayName=profile.data().displayName?profile.data().displayName:profile.data().email.split('@')[0];
       this.photoURL= profile.data().photoURL?profile.data().photoURL:'https://ionicframework.com/docs/img/demos/avatar.svg';

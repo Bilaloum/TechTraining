@@ -8,7 +8,6 @@ import { Storage, getDownloadURL, ref } from '@angular/fire/storage';
 import { AuthServiceService } from '../Services/AuthServices/auth-service.service';
 import { NavController } from '@ionic/angular';
 
-
 @Component({
     selector: 'app-home',
     templateUrl: './home.page.html',
@@ -70,7 +69,8 @@ export class HomePage implements OnInit {
         
     }
     
-    ngOnInit(): void {}
+    ngOnInit(): void {
+    }
 
     ionViewWillEnter() {
     this.InisialiseUserDate()
