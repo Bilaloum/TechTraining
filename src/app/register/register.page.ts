@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { style, transition, trigger ,animate} from '@angular/animations';
 import { Router } from '@angular/router';
 import { AuthServiceService } from '../Services/AuthServices/auth-service.service';
+import { PanierService } from '../Services/Panier/panier.service';
 
 @Component({
   selector: 'app-register',
@@ -23,9 +24,9 @@ import { AuthServiceService } from '../Services/AuthServices/auth-service.servic
 })
 export class RegisterPage implements OnInit {
 constructor(
-    public authService: AuthServiceService,
-    public router: Router
-  ) { }
+    private authService: AuthServiceService,
+    private router: Router
+      ) { }
 
   ngOnInit(){}
   signUp(email, password,confirmedPassword){
