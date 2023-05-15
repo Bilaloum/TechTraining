@@ -19,7 +19,7 @@ export class AuthServiceService {
     public afStore: AngularFirestore,
     public ngFireAuth: AngularFireAuth,
     public router: Router,
-    public ngZone: NgZone,
+    public ngZone: NgZone
   ) {
     this.ngFireAuth.authState.subscribe((user) => {
       if (user) {
@@ -96,9 +96,9 @@ public isAuth:boolean=false;
   AuthLogin(provider) {
     return this.ngFireAuth
       .signInWithPopup(provider)
+    
       .then((result) => {
-
-          const db = this.afStore;
+          /*const db = this.afStore;
           var userRef = db.collection('users').doc(result.user.uid);
 
           if(!userRef){
@@ -107,8 +107,11 @@ public isAuth:boolean=false;
             console.log(userRef);
           }
 
+*/
+           this.SetUserData(result.user);
+
         this.ngZone.run(() => {
-          this.router.navigate(['/tabs//home']);
+          this.router.navigate(['/tabs/home']);
         });
       })
       .catch((error) => {

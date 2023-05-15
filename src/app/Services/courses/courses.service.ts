@@ -27,7 +27,7 @@ export class CoursesService {
     const courseRef = doc(this.firestore,`courses/${id}`);  
 
     return docData(courseRef,{idField: "id"}) as Observable<Course>; 
-    
+
   }
 
   //recomended courses (get the TOP 5 ranked courses)

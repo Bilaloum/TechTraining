@@ -45,6 +45,18 @@ const routes: Routes = [
         loadChildren: () => import('../course-details/course-details.module').then( m => m.CourseDetailsPageModule),
       },
       {
+        path: 'categories',
+        loadChildren: () => import('../categories/categories.module').then( m => m.CategoriesPageModule),
+      },
+      {
+        path: 'categories/:id',
+        loadChildren: () => import('../category-courses/category-courses.module').then( m => m.CategoryCoursesPageModule)
+      },
+      {
+        path: 'categories/:id/:id',
+        loadChildren: () => import('../course-details/course-details.module').then( m => m.CourseDetailsPageModule),
+      },
+      {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full'
