@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import {AngularFirestore,} from '@angular/fire/compat/firestore';
 import { User } from 'src/app/models/types/user';
+import { PanierService } from '../Panier/panier.service';
 
 
 @Injectable({
@@ -95,8 +96,8 @@ public isAuth:boolean=false;
   AuthLogin(provider) {
     return this.ngFireAuth
       .signInWithPopup(provider)
+    
       .then((result) => {
-
           /*const db = this.afStore;
           var userRef = db.collection('users').doc(result.user.uid);
 
@@ -105,13 +106,21 @@ public isAuth:boolean=false;
           }else{
             console.log(userRef);
           }
+
          */
 
+
            this.SetUserData(result.user);
+
           // this.router.navigate(['/tabs//home']);
 
         this.ngZone.run(() => {
         this.router.navigate(['/tabs/home']);
+
+
+        this.ngZone.run(() => {
+          this.router.navigate(['/tabs/home']);
+
         });
       })
       .catch((error) => {
@@ -136,9 +145,6 @@ public isAuth:boolean=false;
     return userRef.set(userData, {
       merge: true,
     });
-  
-  
-    
   }
 
   // Sign-out

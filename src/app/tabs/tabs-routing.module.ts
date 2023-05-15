@@ -25,8 +25,24 @@ const routes: Routes = [
         loadChildren: () => import('../Profile/Profile.module').then(m => m.Tab2PageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'panier',
+        loadChildren: () => import('../panier/panier.module').then(m => m.PanierPageModule)
+      },
+      {
+        path: 'about_us',
+        loadChildren: () => import('../about_us/about_us.module').then(m => m.AboutUsPageModule)
+      },
+      {
+        path: 'categories',
+        loadChildren: () => import('../categories/categories.module').then( m => m.CategoriesPageModule),
+      },
+      {
+        path: 'categories/:id',
+        loadChildren: () => import('../category-courses/category-courses.module').then( m => m.CategoryCoursesPageModule)
+      },
+      {
+        path: 'categories/:id/:id',
+        loadChildren: () => import('../course-details/course-details.module').then( m => m.CourseDetailsPageModule),
       },
       {
         path: 'categories',

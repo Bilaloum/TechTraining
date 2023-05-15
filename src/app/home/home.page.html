@@ -1,11 +1,58 @@
 <!-- using the reused component  -->
+
 <!--<ion-profile-header [profileImg]="photoURL" [userName]="displayName"></ion-profile-header>-->
+
+
+<ion-profile-header [profileImg]="photoURL" [userName]="displayName"></ion-profile-header>
+
 
 <ion-content [fullscreen]="true">
   <ion-card class="home-head">
     <ion-card-content></ion-card-content>
   </ion-card>
- 
+  <!-- <ion-card *ngFor=" let course of courses" [style]="'cursor: pointer;'" routerLink="">
+    <ion-card-header>
+      <ion-img [src]="course.image_480x270" alt="corse image" ></ion-img>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>{{course.title}}</ion-card-title>
+      <ion-card-subtitle>
+        <ion-icon *ngFor="let t of [1,2,3,4,5]" name="star" class="primary-color"></ion-icon>
+      </ion-card-subtitle>
+      <ion-text >${{ course.price}}</ion-text>
+    </ion-card-content>
+  </ion-card> -->
+
+  <!-- ------------------- -->
+  <!-- <ion-list lines="none">
+    <ion-item *ngFor=" let course of courses" [style]="'cursor: pointer;'">
+      <ion-thumbnail slot="start">
+        <ion-img [src]="course.image_480x270" alt="corse image"></ion-img>
+      </ion-thumbnail>
+          <ion-label>{{course.title}}</ion-label>
+          <ion-label>
+            <ion-icon *ngFor="let t of [1,2,3,4,5]" name="star" class="primary-color"></ion-icon>
+          </ion-label>
+          <ion-text>${{ course.price}}</ion-text>
+    </ion-item>
+  </ion-list> -->
+
+  <!-- <ion-card *ngFor=" let course of courses" [style]="'cursor: pointer;'" routerLink="">
+    <img [src]="course.image_480x270" alt="corse image" style="width: 100px;" />
+  
+    <ion-card-content>
+      <ion-card-title>{{course.title}}</ion-card-title>
+      <ion-card-subtitle>
+        <ion-icon *ngFor="let t of [1,2,3,4,5]" name="star" class="primary-color"></ion-icon>
+      </ion-card-subtitle>
+      <ion-text>${{ course.price}}</ion-text>
+    </ion-card-content>
+  </ion-card> -->
+  <!-- <div class="categories">
+    <ion-button class="primary-bg-color" color="primary-bg-color" >programming</ion-button>
+    <ion-button class="primary-bg-color" color="primary-bg-color">programming</ion-button>
+    <ion-button class="primary-bg-color" color="primary-bg-color">programming</ion-button>
+  </div> -->
   <div class="section-text ion-text-capitalize ion-margin-top title">
     categories
   </div>
