@@ -96,31 +96,19 @@ public isAuth:boolean=false;
   AuthLogin(provider) {
     return this.ngFireAuth
       .signInWithPopup(provider)
-    
       .then((result) => {
-          /*const db = this.afStore;
+          const db = this.afStore;
           var userRef = db.collection('users').doc(result.user.uid);
-
-          if(!userRef){
+         /* if(!userRef){
           this.SetUserData(result.user);
           }else{
             console.log(userRef);
-          }
-
-         */
-
-
+          }*/
            this.SetUserData(result.user);
 
           // this.router.navigate(['/tabs//home']);
-
-        this.ngZone.run(() => {
-        this.router.navigate(['/tabs/home']);
-
-
         this.ngZone.run(() => {
           this.router.navigate(['/tabs/home']);
-
         });
       })
       .catch((error) => {
