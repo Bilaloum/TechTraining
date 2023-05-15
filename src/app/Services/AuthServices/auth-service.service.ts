@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import {AngularFirestore,} from '@angular/fire/compat/firestore';
 import { User } from 'src/app/models/types/user';
-import { PanierService } from '../Panier/panier.service';
+//import { PanierService } from '../Panier/panier.service';
 
 
 @Injectable({

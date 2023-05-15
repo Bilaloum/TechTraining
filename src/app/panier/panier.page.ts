@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Course } from '../models/Course';
 import { Panier } from '../models/Panier/Panier';
@@ -11,7 +11,7 @@ import { Storage, getDownloadURL, ref } from '@angular/fire/storage';
   templateUrl: 'panier.page.html',
   styleUrls: ['panier.page.scss']
 })
-export class PanierPage {
+export class PanierPage implements OnInit{
   coursesUser : Course[];
   constructor(private sr : PanierService,private fireStorage:Storage) {}
 
@@ -19,7 +19,7 @@ export class PanierPage {
 
       this.sr.checkCart();
 
-     this.sr.justTest().subscribe(data =>{
+      this.sr.justTest().subscribe(data =>{
       data.forEach(course => {
         const imgRef = ref(this.fireStorage,course.image);
         getDownloadURL(imgRef).then(data => {
@@ -27,7 +27,7 @@ export class PanierPage {
         })
     })
       this.coursesUser = data
-     });
+    });
   }
 
   DeleteCourseFromCart(id:String){

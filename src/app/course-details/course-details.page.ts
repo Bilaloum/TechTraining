@@ -20,9 +20,8 @@ export class CourseDetailsPage implements OnInit {
     private fireStorage: Storage,
     private panierService : PanierService
   
-    ) { 
+    ) {}
     
-  }
   ngOnInit() {
     const course_id = this.activatedRoute.snapshot.paramMap.get("id");
       
