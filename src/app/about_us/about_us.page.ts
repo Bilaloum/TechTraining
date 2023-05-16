@@ -11,7 +11,7 @@ import { AboutUsService } from '../Services/About_Us/about-us.service';
 })
 export class AboutUsPage {
   persons : Person[];
-  constructor(private fireStorage:Storage,private about_UsService : AboutUsService) {}
+  constructor(private about_UsService : AboutUsService) {}
 
   ngOnInit(){
 
