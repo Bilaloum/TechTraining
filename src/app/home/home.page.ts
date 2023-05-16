@@ -32,11 +32,10 @@ export class HomePage implements OnInit {
         private authService : AuthServiceService,
         public navCtrl: NavController,
         ) { 
-                this.InisialiseUserDate();
             //categories
             this.categoriesService.getCetegories().subscribe(res => {
                 this.categories = res;
-                console.log(res);
+
             })
 
             //recomended courses (get the TOP 5 ranked courses)
@@ -69,20 +68,8 @@ export class HomePage implements OnInit {
         
     }
     
-    ngOnInit(): void {
-    }
+    ngOnInit(): void {}
 
-    ionViewWillEnter() {
-    this.InisialiseUserDate()
-    }
-
-
-    InisialiseUserDate(){
-        this.authService.getUser().subscribe((profile)=> {
-            this.displayName=profile.data().displayName?profile.data().displayName:profile.data().email.split('@')[0];
-            this.photoURL= profile.data().photoURL?profile.data().photoURL:'https://ionicframework.com/docs/img/demos/avatar.svg';
-        });
-    }
 
     ngAfterContentChecked(): void {
         

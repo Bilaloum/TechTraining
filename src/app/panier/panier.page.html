@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title>
-        Panier
+        Cart
       </ion-title>
     </ion-toolbar>
   </ion-header>
@@ -9,7 +9,7 @@
   <ion-content [fullscreen]="true">
     <ion-header collapse="condense">
       <ion-toolbar>
-        <ion-title size="large">Panier</ion-title>
+        <ion-title size="large">Cart</ion-title>
       </ion-toolbar>
     </ion-header>
   
@@ -25,8 +25,8 @@
           </ion-label>
         </ion-item>
         <ion-card-content class="ion-margin-top">
-            <ion-button fill="outline" >Acheter</ion-button>
-            <ion-button fill="clear" (click) = "DeleteCourseFromCart(course.title)" >Supprimer</ion-button>
+            <ion-button fill="outline" >Buy</ion-button>
+            <ion-button fill="clear" (click) = "DeleteCourseFromCart(course.title)" >Delete</ion-button>
         </ion-card-content>
       </ion-card>
     </ion-list>
