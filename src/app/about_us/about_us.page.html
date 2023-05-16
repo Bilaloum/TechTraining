@@ -1,20 +1,6 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      About Us
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-custom-header title="About Us"></ion-custom-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">About Us</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-   
-
 
     <ion-list lines="none">
       <ion-card *ngFor="let person of persons" class="card">
@@ -23,7 +9,7 @@
             <img [src]="person.image" alt="person image" />
           </ion-thumbnail>
           <ion-label class="ion-text-wrap">
-           <p> {{person.lastName}}   {{person.firstName}}</p> 
+          <p> {{person.lastName}}   {{person.firstName}}</p> 
             <p color="primary-color">Description</p>
           </ion-label>
         </ion-item>

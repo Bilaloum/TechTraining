@@ -1,4 +1,4 @@
-<ion-details-header [title]="course?.title" defaultHref="/tabs/home/"></ion-details-header>
+<ion-custom-header [title]="course?.title" [hasBackButton]="true" defaultHref="/tabs/home/"></ion-custom-header>
 
 <ion-content class="ion-no-padding">
   <ion-card class="ion-no-margin">
@@ -19,7 +19,7 @@
       <ion-item lines="none">
         <ion-label color="primary"> {{ course?.price | currency:"USD" }}</ion-label>
       </ion-item>
-      <ion-button expand="block"  *ngIf="!isExist" (click) = "addCourseToCart(course.title)" class="ion-text-capitalize"> Enroll</ion-button>
+      <ion-button expand="block"  *ngIf="!isExist" (click) = "addCourseToCart(course.title)" class="ion-text-capitalize" [routerLink] = "['/tabs/panier']" > Enroll</ion-button>
       <div   *ngIf="isExist" >
         <h2>Cours already in cart</h2>
         <ion-button expand="block" [routerLink] = "['/tabs/panier']"  class="ion-text-capitalize">See Cart</ion-button>

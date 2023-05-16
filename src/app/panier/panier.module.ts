@@ -6,6 +6,7 @@ import { PanierPage } from './panier.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { PanierPageRoutingModule } from './panier-routing.module';
+import { CustomHeaderModule } from '../components/custom-header/custom-header.module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { PanierPageRoutingModule } from './panier-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    PanierPageRoutingModule
+    PanierPageRoutingModule,
+    CustomHeaderModule
   ],
   declarations: [PanierPage]
 })

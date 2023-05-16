@@ -6,6 +6,7 @@ import { AboutUsPage } from './about_us.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { AboutUsPageRoutingModule } from './about_us-routing.module';
+import { CustomHeaderModule } from '../components/custom-header/custom-header.module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { AboutUsPageRoutingModule } from './about_us-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    AboutUsPageRoutingModule
+    AboutUsPageRoutingModule,
+    CustomHeaderModule
   ],
   declarations: [AboutUsPage]
 })

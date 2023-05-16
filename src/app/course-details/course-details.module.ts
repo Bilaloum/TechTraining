@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CourseDetailsPageRoutingModule } from './course-details-routing.module';
 
 import { CourseDetailsPage } from './course-details.page';
-import { DetailsHeaderModule } from '../components/details-header/details-header.module';
+import { CustomHeaderModule } from '../components/custom-header/custom-header.module';
 
 @NgModule({
   imports: [
@@ -15,7 +15,7 @@ import { DetailsHeaderModule } from '../components/details-header/details-header
     FormsModule,
     IonicModule,
     CourseDetailsPageRoutingModule,
-    DetailsHeaderModule
+    CustomHeaderModule
   ],
   declarations: [CourseDetailsPage]
 })

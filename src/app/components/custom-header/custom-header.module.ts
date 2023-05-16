@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DetailsHeaderComponent } from './details-header.component';
+import { CustomHeaderComponent } from './custom-header.component';
 import { IonicModule } from '@ionic/angular';
 
 
 
 @NgModule({
-  declarations: [DetailsHeaderComponent],
+  declarations: [CustomHeaderComponent],
   imports: [
     CommonModule,
     IonicModule
   ],
-  exports:[DetailsHeaderComponent]
+  exports:[CustomHeaderComponent]
 })
-export class DetailsHeaderModule { }
+export class CustomHeaderModule { }
