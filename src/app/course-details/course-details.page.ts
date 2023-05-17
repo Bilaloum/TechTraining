@@ -54,6 +54,7 @@ export class CourseDetailsPage implements OnInit {
 
   addCourseToCart(title:string){
     this.panierService.addCourseToCart(title);
+    this.isExist = true;
   }
 
 }
